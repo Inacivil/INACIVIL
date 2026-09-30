@@ -38,6 +38,63 @@
             }
         }
     </script>
+
+    <!-- Script CDN de model-viewer para visor 3D -->
+    <script type="module" src="https://ajax.googleapis.com/ajax/libs/model-viewer/3.4.0/model-viewer.min.js"></script>
+
+    <!-- Estilos CSS para las nuevas secciones -->
+    <style>
+        /* Estilos para el Visor 3D */
+        .model-viewer-container {
+            position: relative;
+            background-color: #1a202c; /* Fondo sobrio/moderno para el visor */
+            border-radius: 1.5rem; /* rounded-3xl */
+            overflow: hidden;
+            box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05); /* shadow-xl */
+            border: 1px solid rgba(49, 62, 85, 0.5); /* Borde sutil */
+        }
+        model-viewer {
+            width: 100%;
+            height: 500px; /* Altura fija para el visor */
+            --controls-display: flex; /* Mostrar controles */
+            --poster-color: #1a202c; /* Color del póster mientras carga */
+            --progress-bar-color: #2563eb; /* Color de la barra de progreso */
+            --progress-bar-background-color: #4a5568; /* Color de fondo de la barra de progreso */
+        }
+        @media (max-width: 768px) {
+            model-viewer {
+                height: 350px; /* Altura ajustada para móviles */
+            }
+        }
+
+        /* Estilos para el Mapa SVG */
+        .mapa-container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 2.5rem 0; /* py-10 */
+            background-color: #f8fafc; /* bg-slate-50 */
+        }
+        .mapa-svg {
+            width: 100%;
+            max-width: 900px; /* Ancho máximo para el mapa */
+            height: auto;
+            border-radius: 1rem; /* rounded-xl */
+            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06); /* shadow-md */
+            border: 1px solid #e2e8f0; /* border-slate-200 */
+            transition: all 0.3s ease;
+        }
+        .mapa-svg:hover {
+            box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05); /* shadow-lg */
+            transform: translateY(-2px);
+        }
+        /* Asegurar que el SVG sea responsive */
+        .mapa-svg object {
+            display: block;
+            width: 100%;
+            height: auto;
+        }
+    </style>
 </head>
 <body class="bg-slate-50 text-slate-800 font-sans antialiased selection:bg-tech-accent selection:text-white">
 
@@ -55,6 +112,8 @@
                     <a href="#inicio" class="text-slate-300 hover:text-white transition-colors text-sm font-semibold uppercase tracking-wider">Inicio</a>
                     <a href="#servicios" class="text-slate-300 hover:text-white transition-colors text-sm font-semibold uppercase tracking-wider">Servicios</a>
                     <a href="#portafolio" class="text-slate-300 hover:text-white transition-colors text-sm font-semibold uppercase tracking-wider">Proyectos</a>
+                    <a href="#visor-3d" class="text-slate-300 hover:text-white transition-colors text-sm font-semibold uppercase tracking-wider">Visor 3D</a>
+                    <a href="#cobertura" class="text-slate-300 hover:text-white transition-colors text-sm font-semibold uppercase tracking-wider">Cobertura</a>
                     <a href="#contacto" class="text-slate-300 hover:text-white transition-colors text-sm font-semibold uppercase tracking-wider">Contacto</a>
                     <a href="https://instagram.com/inacivil" target="_blank" rel="noopener noreferrer" class="text-slate-300 hover:text-pink-400 transition-colors flex items-center gap-1.5 text-sm font-semibold">
                         <i class="fa-brands fa-instagram text-lg"></i> Instagram
@@ -83,7 +142,25 @@
                 <i class="fa-solid fa-chevron-right text-blue-400 text-sm"></i>
             </a>
 
-            <!-- 2. Contacto -->
+            <!-- 2. Visor 3D -->
+            <a href="#visor-3d" class="mobile-link flex items-center justify-between p-3 rounded-xl bg-purple-600/15 border border-purple-500/30 text-white hover:bg-purple-600/25 transition-all">
+                <div class="flex items-center gap-3">
+                    <i class="fa-solid fa-cube text-purple-400 text-lg"></i>
+                    <span class="font-bold text-base">Visor 3D</span>
+                </div>
+                <i class="fa-solid fa-chevron-right text-purple-400 text-sm"></i>
+            </a>
+
+            <!-- 3. Cobertura -->
+            <a href="#cobertura" class="mobile-link flex items-center justify-between p-3 rounded-xl bg-orange-600/15 border border-orange-500/30 text-white hover:bg-orange-600/25 transition-all">
+                <div class="flex items-center gap-3">
+                    <i class="fa-solid fa-map-marked-alt text-orange-400 text-lg"></i>
+                    <span class="font-bold text-base">Cobertura</span>
+                </div>
+                <i class="fa-solid fa-chevron-right text-orange-400 text-sm"></i>
+            </a>
+
+            <!-- 4. Contacto -->
             <a href="#contacto" class="mobile-link flex items-center justify-between p-3 rounded-xl bg-emerald-600/15 border border-emerald-500/30 text-white hover:bg-emerald-600/25 transition-all">
                 <div class="flex items-center gap-3">
                     <i class="fa-solid fa-envelope text-emerald-400 text-lg"></i>
@@ -92,7 +169,7 @@
                 <i class="fa-solid fa-chevron-right text-emerald-400 text-sm"></i>
             </a>
 
-            <!-- 3. Instagram -->
+            <!-- 5. Instagram -->
             <a href="https://instagram.com/inacivil" target="_blank" rel="noopener noreferrer" class="mobile-link flex items-center justify-between p-3 rounded-xl bg-pink-600/15 border border-pink-500/30 text-white hover:bg-pink-600/25 transition-all">
                 <div class="flex items-center gap-3">
                     <i class="fa-brands fa-instagram text-pink-400 text-xl"></i>
@@ -195,6 +272,19 @@
         </div>
     </section>
 
+    <!-- SECCIÓN DE COBERTERA / MAPA DE MÉXICO -->
+    <section id="cobertura" class="py-24 bg-slate-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center max-w-3xl mx-auto mb-16">
+                <h2 class="text-3xl md:text-4xl font-bold text-tech-900 mb-4">Cobertura y Presencia de Proyectos en México</h2>
+                <p class="text-lg text-slate-600">Trabajamos en diversas regiones del país, adaptándonos a las normativas y desafíos locales de cada proyecto.</p>
+            </div>
+            <div class="mapa-container">
+                <object data="mapa/mexico.svg" type="image/svg+xml" class="mapa-svg"></object>
+            </div>
+        </div>
+    </section>
+
     <!-- Sección Proyectos (#portafolio) -->
     <section id="portafolio" class="py-24 bg-slate-50">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -259,7 +349,7 @@
                                 <span class="text-xs text-blue-300">Acero y Concreto</span>
                             </div>
                         </div>
-                    </a>
+                    </div>
                     <div class="p-5">
                         <h4 class="font-bold text-tech-900 text-lg">Plaza Comercial</h4>
                         <p class="text-sm text-slate-500 mt-1">Diseño estructural · Acero y concreto reforzado</p>
@@ -269,6 +359,34 @@
                     </div>
                 </div>
             </div>
+        </div>
+    </section>
+
+    <!-- SECCIÓN DE VISOR 3D INTERACTIVO -->
+    <section id="visor-3d" class="py-24 bg-tech-900 text-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center max-w-3xl mx-auto mb-16">
+                <h2 class="text-3xl md:text-4xl font-bold mb-4">Visualización 3D Interactiva de Proyectos</h2>
+                <p class="text-lg text-slate-300">Explora en detalle nuestros modelos estructurales. Manipula, rota y haz zoom para una comprensión completa.</p>
+            </div>
+            <div class="model-viewer-container">
+                <model-viewer 
+                    src="modelos-3d/carcamo.gltf" 
+                    alt="Modelo 3D de Cárcamo de Aguas Residuales" 
+                    ar 
+                    ar-modes="webxr scene-viewer quick-look" 
+                    camera-controls 
+                    auto-rotate 
+                    shadow-intensity="1"
+                    environment-image="neutral"
+                    loading="eager"
+                    exposure="1"
+                    shadow-softness="0.5"
+                ></model-viewer>
+            </div>
+            <p class="text-center text-sm text-slate-400 mt-8">
+                Modelo 3D: Cárcamo de Aguas Residuales. Utiliza los controles para interactuar con el modelo.
+            </p>
         </div>
     </section>
 
