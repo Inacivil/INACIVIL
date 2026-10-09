@@ -1,0 +1,490 @@
+<!DOCTYPE html>
+<html lang="es" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aviso de Privacidad y Términos Legales | Inacivil</title>
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" href="favicon.png">
+
+    <!-- Meta tags -->
+    <meta name="description" content="Aviso de Privacidad Integral, Términos Legales y Derechos ARCO de Inacivil - Luis Alberto Alam Valenzuela.">
+    <meta property="og:title" content="Aviso de Privacidad y Términos Legales | Inacivil">
+    <meta property="og:description" content="Marco legal, responsabilidades técnicas y tratamiento de datos personales conforme a la LFPDPPP.">
+    <meta property="og:type" content="website">
+
+    <!-- Tailwind CSS y Fuentes -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                    },
+                    colors: {
+                        tech: {
+                            900: '#0f172a',
+                            800: '#1e293b',
+                            700: '#334155',
+                            accent: '#2563eb',
+                            accentHover: '#1d4ed8'
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        /* Desplazamiento nativo con margen para que la barra fija no tape los títulos */
+        .seccion-legal {
+            scroll-margin-top: 160px;
+        }
+        /* Destello temporal al pulsar un botón */
+        .target-highlight {
+            animation: pulseHighlight 1.6s ease-out;
+        }
+        @keyframes pulseHighlight {
+            0% { box-shadow: 0 0 0 5px rgba(37, 99, 235, 0.5); }
+            100% { box-shadow: 0 0 0 0 rgba(37, 99, 235, 0); }
+        }
+    </style>
+</head>
+<body class="bg-slate-100 text-slate-800 font-sans antialiased selection:bg-tech-accent selection:text-white">
+
+    <!-- Barra de navegación fija -->
+    <nav class="fixed w-full z-50 bg-tech-900/95 backdrop-blur-sm border-b border-slate-800 transition-all duration-300">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-20">
+                <a href="index.html" class="flex items-center gap-2">
+                    <i class="fa-solid fa-layer-group text-tech-accent text-2xl"></i>
+                    <span class="font-bold text-xl tracking-tight text-white">Ing. Estructural<span class="text-tech-accent">.</span></span>
+                </a>
+                
+                <div class="hidden md:flex items-center space-x-6">
+                    <a href="index.html#inicio" class="text-slate-300 hover:text-white transition-colors text-sm font-semibold uppercase tracking-wider">Inicio</a>
+                    <a href="index.html#servicios" class="text-slate-300 hover:text-white transition-colors text-sm font-semibold uppercase tracking-wider">Servicios</a>
+                    <a href="index.html#portafolio" class="text-slate-300 hover:text-white transition-colors text-sm font-semibold uppercase tracking-wider">Proyectos</a>
+                    <a href="index.html#contacto" class="text-slate-300 hover:text-white transition-colors text-sm font-semibold uppercase tracking-wider">Contacto</a>
+                    <a href="index.html" class="px-4 py-2 rounded-lg bg-tech-accent hover:bg-tech-accentHover text-white text-xs font-bold uppercase tracking-wider transition-all flex items-center gap-2 shadow-md">
+                        <i class="fa-solid fa-arrow-left"></i> Volver a la Web
+                    </a>
+                </div>
+
+                <div class="md:hidden">
+                    <button id="menu-toggle-btn" class="text-slate-300 hover:text-white p-2.5 rounded-lg bg-slate-800 border border-slate-700 focus:outline-none" aria-label="Abrir menú">
+                        <i id="menu-icon" class="fa-solid fa-bars text-2xl"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Menú móvil -->
+        <div id="mobile-menu" class="hidden md:hidden border-t border-slate-800 bg-slate-950/95 px-4 pt-4 pb-6 space-y-3">
+            <a href="index.html" class="flex items-center justify-between p-3 rounded-xl bg-blue-600/15 border border-blue-500/30 text-white font-bold text-base">
+                <span class="flex items-center gap-2"><i class="fa-solid fa-arrow-left text-blue-400"></i> Volver a la página principal</span>
+            </a>
+            <div class="pt-2 flex flex-col gap-2 text-sm text-slate-300">
+                <a href="#aviso-legal" class="nav-jump p-2 rounded-lg hover:bg-slate-800">1. Aviso Legal y Términos de Uso</a>
+                <a href="#aviso-privacidad" class="nav-jump p-2 rounded-lg hover:bg-slate-800">2. Aviso de Privacidad Integral</a>
+                <a href="#derechos-arco" class="nav-jump p-2 rounded-lg hover:bg-slate-800">3. Ejercicio de Derechos ARCO</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Encabezado Hero -->
+    <header class="relative pt-32 pb-16 lg:pt-40 lg:pb-20 bg-tech-900 text-white overflow-hidden border-b border-slate-800">
+        <div class="absolute inset-0 opacity-10" style="background-image: linear-gradient(#334155 1px, transparent 1px), linear-gradient(90deg, #334155 1px, transparent 1px); background-size: 40px 40px;"></div>
+        
+        <div class="relative max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+            <div class="inline-flex items-center gap-2 mb-4 px-3.5 py-1.5 rounded-full bg-slate-800 border border-slate-700 text-tech-accent text-xs font-semibold tracking-widest uppercase">
+                <i class="fa-solid fa-scale-balanced"></i> Documentación Legal Oficial
+            </div>
+            <h1 class="text-3xl md:text-5xl font-bold tracking-tight mb-4 leading-tight">
+                Términos de Uso, Privacidad y <span class="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-tech-accent">Derechos ARCO</span>
+            </h1>
+            <p class="text-base sm:text-lg text-slate-400 max-w-3xl mx-auto leading-relaxed">
+                Información técnica, contractual y marco de protección de datos personales de <strong>Inacivil</strong>, conforme a la legislación de los Estados Unidos Mexicanos.
+            </p>
+            <div class="mt-6 flex flex-wrap items-center justify-center gap-3 text-xs text-slate-400">
+                <span class="bg-slate-800/80 px-3 py-1.5 rounded-full border border-slate-700/60"><i class="fa-solid fa-user-tie text-tech-accent mr-1"></i> Titular: Luis Alberto Alam Valenzuela (Inacivil)</span>
+                <span class="bg-slate-800/80 px-3 py-1.5 rounded-full border border-slate-700/60"><i class="fa-solid fa-location-dot text-red-400 mr-1"></i> Cancún, Quintana Roo</span>
+                <span class="bg-slate-800/80 px-3 py-1.5 rounded-full border border-slate-700/60"><i class="fa-solid fa-calendar-check text-blue-400 mr-1"></i> Actualización: Octubre de 2026</span>
+            </div>
+        </div>
+    </header>
+
+    <!-- Barra de Accesos Rápidos (Botones Interactivos) -->
+    <div class="sticky top-20 z-40 bg-white/95 backdrop-blur-md border-b border-slate-200 shadow-sm py-3.5 px-4">
+        <div class="max-w-5xl mx-auto flex flex-wrap items-center justify-between gap-3">
+            <span class="text-slate-500 font-bold text-xs uppercase tracking-wider hidden sm:flex items-center gap-1.5">
+                <i class="fa-solid fa-compass text-tech-accent"></i> Ir a la sección:
+            </span>
+            <div class="flex items-center gap-2 sm:gap-3 overflow-x-auto w-full sm:w-auto pb-1 sm:pb-0">
+                <a href="#aviso-legal" class="jump-btn px-4 py-2 rounded-xl bg-slate-100 hover:bg-tech-accent hover:text-white text-slate-700 font-semibold text-xs sm:text-sm transition-all shadow-sm flex items-center gap-2 whitespace-nowrap">
+                    <i class="fa-solid fa-gavel text-xs"></i> Aviso Legal y Términos
+                </a>
+                <a href="#aviso-privacidad" class="jump-btn px-4 py-2 rounded-xl bg-slate-100 hover:bg-tech-accent hover:text-white text-slate-700 font-semibold text-xs sm:text-sm transition-all shadow-sm flex items-center gap-2 whitespace-nowrap">
+                    <i class="fa-solid fa-shield-halved text-xs"></i> Aviso de Privacidad (LFPDPPP)
+                </a>
+                <a href="#derechos-arco" class="jump-btn px-4 py-2 rounded-xl bg-blue-50 text-tech-accent border border-blue-200 hover:bg-tech-accent hover:text-white font-semibold text-xs sm:text-sm transition-all shadow-sm flex items-center gap-2 whitespace-nowrap">
+                    <i class="fa-solid fa-user-lock text-xs"></i> Derechos ARCO
+                </a>
+            </div>
+        </div>
+    </div>
+
+    <!-- Contenido Principal -->
+    <main class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 py-12 space-y-16">
+
+        <!-- ================= SECCIÓN 1: AVISO LEGAL Y TÉRMINOS ================= -->
+        <article id="aviso-legal" class="seccion-legal bg-white rounded-3xl p-6 sm:p-12 shadow-sm border border-slate-200 transition-all">
+            <div class="border-b border-slate-200 pb-6 mb-8">
+                <div class="inline-flex items-center gap-1.5 px-3 py-1 rounded bg-blue-50 text-tech-accent text-xs font-bold tracking-wider uppercase mb-2">
+                    <i class="fa-solid fa-gavel"></i> Sección 1 de 3
+                </div>
+                <h2 class="text-2xl sm:text-3xl font-extrabold text-tech-900 tracking-tight">AVISO LEGAL Y TÉRMINOS DE USO DE INACIVIL</h2>
+                <p class="text-slate-500 text-sm mt-1">Condiciones legales que regulan el uso de la plataforma digital y los servicios de cálculo estructural.</p>
+            </div>
+
+            <div class="space-y-8 text-slate-700 text-sm sm:text-base leading-relaxed">
+                <!-- 1. Identificación -->
+                <section class="border-l-4 border-slate-300 pl-4 sm:pl-6">
+                    <h3 class="text-lg font-bold text-tech-900 mb-2">1. DATOS DE IDENTIFICACIÓN</h3>
+                    <p>
+                        El presente sitio web es operado por <strong>Luis Alberto Alam Valenzuela</strong>, titular de la marca comercial <strong>Inacivil</strong>, con domicilio en Cancún, Quintana Roo, México, profesional especializado en Ingeniería y Cálculo Estructural, con correo electrónico de contacto: 
+                        <a href="mailto:Inacivix@gmail.com" class="text-tech-accent font-semibold hover:underline">Inacivix@gmail.com</a>.
+                    </p>
+                </section>
+
+                <!-- 2. Objeto -->
+                <section class="border-l-4 border-slate-300 pl-4 sm:pl-6">
+                    <h3 class="text-lg font-bold text-tech-900 mb-2">2. OBJETO Y CARÁCTER INFORMATIVO</h3>
+                    <p>
+                        El contenido, imágenes, descripciones de servicios, metodologías y portafolio presentados en este sitio web tienen un carácter <strong>estrictamente informativo y promocional</strong> de los servicios de ingeniería y cálculo estructural que ofrece Inacivil. Ningún elemento de este sitio constituye una asesoría técnica ejecutiva, un dictamen de seguridad estructural definitivo ni una oferta comercial vinculante.
+                    </p>
+                </section>
+
+                <!-- 3. Ausencia de Relación -->
+                <section class="border-l-4 border-slate-300 pl-4 sm:pl-6">
+                    <h3 class="text-lg font-bold text-tech-900 mb-2">3. AUSENCIA DE RELACIÓN PROFESIONAL</h3>
+                    <p>
+                        El envío de solicitudes, datos, planos o mensajes a través de formularios de contacto, correo electrónico o enlaces directos a WhatsApp disponibles en este sitio <strong>no establece una relación profesional ni un compromiso de prestación de servicios</strong> entre el usuario y Luis Alberto Alam Valenzuela (Inacivil). Toda relación profesional y prestación de servicios de cálculo estructural, elaboración de memorias técnicas o planos ejecutivos se formalizará únicamente mediante la aceptación por escrito de una propuesta económica o la firma de un contrato de servicios profesionales.
+                    </p>
+                </section>
+
+                <!-- 4. Responsabilidad Técnica -->
+                <section class="border-l-4 border-tech-accent pl-4 sm:pl-6 bg-slate-50 p-5 rounded-r-2xl border-y border-r border-slate-200">
+                    <h3 class="text-lg font-bold text-tech-900 mb-3 flex items-center gap-2">
+                        <i class="fa-solid fa-shield-halved text-tech-accent"></i> 4. LIMITACIÓN DE RESPONSABILIDAD TÉCNICA Y PROFESIONAL
+                    </h3>
+                    <p class="mb-3 text-slate-700">
+                        Para los servicios de cálculo estructural contratados fuera de esta plataforma web:
+                    </p>
+                    <div class="space-y-4 text-xs sm:text-sm text-slate-600">
+                        <div class="bg-white p-4 rounded-xl border border-slate-200 shadow-sm">
+                            <strong class="text-tech-900 block text-sm mb-1"><i class="fa-solid fa-file-lines text-blue-500 mr-1.5"></i> Información del Cliente:</strong>
+                            <p>
+                                Los cálculos estructurales, modelos tridimensionales y memorias técnicas desarrollados por Inacivil se realizan con base en los parámetros, estudios (ej. mecánica de suelos, topografía) e información arquitectónica proporcionados por el cliente. <strong>Luis Alberto Alam Valenzuela no asume responsabilidad</strong> por errores, fallas o imprecisiones estructurales derivadas de información técnica errónea, incompleta o inexacta entregada por el cliente o terceros.
+                            </p>
+                        </div>
+                        <div class="bg-white p-4 rounded-xl border border-slate-200 shadow-sm">
+                            <strong class="text-tech-900 block text-sm mb-1"><i class="fa-solid fa-helmet-safety text-amber-500 mr-1.5"></i> Ejecución y Supervisión de Obra:</strong>
+                            <p>
+                                La responsabilidad técnica de Inacivil se limita estrictamente al diseño estructural y memoria de cálculo entregados formalmente. <strong>No se asume responsabilidad</strong> sobre la ejecución física de la obra, los procedimientos constructivos empleados, la calidad de los materiales (ej. resistencia del concreto, acero), ni por modificaciones realizadas al diseño en sitio sin autorización previa y por escrito.
+                            </p>
+                            <p class="mt-2 text-slate-500 text-xs italic">
+                                * La responsabilidad de la supervisión y ejecución en obra recae en el Director Responsable de Obra (DRO), Corresponsable en Seguridad Estructural o perito facultado correspondiente según la normativa local aplicable.
+                            </p>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- 5. Propiedad Intelectual -->
+                <section class="border-l-4 border-slate-300 pl-4 sm:pl-6">
+                    <h3 class="text-lg font-bold text-tech-900 mb-2">5. PROPIEDAD INTELECTUAL Y LICENCIA DE USO</h3>
+                    <p>
+                        Todos los contenidos de este sitio web (incluyendo la marca Inacivil, logotipos, textos, gráficos, esquemas de detalle estructural, fotografías de proyectos y diseño visual) son propiedad exclusiva de <strong>Luis Alberto Alam Valenzuela</strong> o cuentan con los derechos de uso correspondientes. Queda prohibida su reproducción, copia, distribución o uso comercial sin autorización previa y por escrito.
+                    </p>
+                    <p class="mt-2 text-xs sm:text-sm text-slate-600 bg-slate-50 p-3 rounded-lg border border-slate-200">
+                        En caso de contratación de servicios profesionales, la entrega de memorias de cálculo y planos otorga al cliente únicamente una <strong>licencia de uso limitada y no exclusiva</strong> para la ejecución de la obra específica contratada, conservando el titular la totalidad de los derechos de autor sobre el diseño estructural.
+                    </p>
+                </section>
+
+                <!-- 6. Legislación y Jurisdicción -->
+                <section class="border-l-4 border-slate-300 pl-4 sm:pl-6">
+                    <h3 class="text-lg font-bold text-tech-900 mb-2">6. LEGISLACIÓN Y JURISDICCIÓN</h3>
+                    <p>
+                        Para la interpretación y cumplimiento de estos términos, así como para la resolución de cualquier controversia, el usuario y el titular se someten expresamente a la legislación federal de los <strong>Estados Unidos Mexicanos</strong> y a los tribunales competentes de la ciudad de <strong>Cancún, Quintana Roo</strong>, renunciando a cualquier otro fuero que pudiera corresponderles por razón de sus domicilios presentes o futuros.
+                    </p>
+                </section>
+            </div>
+        </article>
+
+        <!-- ================= SECCIÓN 2: AVISO DE PRIVACIDAD INTEGRAL ================= -->
+        <article id="aviso-privacidad" class="seccion-legal bg-white rounded-3xl p-6 sm:p-12 shadow-sm border border-slate-200 transition-all">
+            <div class="border-b border-slate-200 pb-6 mb-8">
+                <div class="inline-flex items-center gap-1.5 px-3 py-1 rounded bg-blue-50 text-tech-accent text-xs font-bold tracking-wider uppercase mb-2">
+                    <i class="fa-solid fa-shield-halved"></i> Sección 2 de 3
+                </div>
+                <h2 class="text-2xl sm:text-3xl font-extrabold text-tech-900 tracking-tight">AVISO DE PRIVACIDAD INTEGRAL DE INACIVIL</h2>
+                <p class="text-slate-500 text-sm mt-1">Conforme a la Ley Federal de Protección de Datos Personales en Posesión de los Particulares (LFPDPPP) y su Reglamento.</p>
+            </div>
+
+            <!-- Preámbulo de Responsabilidad -->
+            <div class="mb-8 p-5 bg-slate-900 text-white rounded-2xl border border-slate-800 leading-relaxed text-sm">
+                <p>
+                    De conformidad con lo dispuesto en la <strong>Ley Federal de Protección de Datos Personales en Posesión de los Particulares (LFPDPPP)</strong> y su Reglamento, <strong>Luis Alberto Alam Valenzuela</strong>, operando bajo la marca comercial <strong>Inacivil</strong>, con domicilio en Cancún, Quintana Roo, México, y correo de contacto <a href="mailto:Inacivix@gmail.com" class="text-tech-accent font-mono font-bold hover:underline">Inacivix@gmail.com</a>, es el responsable del tratamiento y protección de sus datos personales.
+                </p>
+            </div>
+
+            <div class="space-y-8 text-slate-700 text-sm sm:text-base leading-relaxed">
+                <!-- 1. Datos que se recaban -->
+                <section class="border-l-4 border-slate-300 pl-4 sm:pl-6">
+                    <h3 class="text-lg font-bold text-tech-900 mb-2">1. DATOS PERSONALES QUE SE RECABAN</h3>
+                    <p class="mb-3">
+                        Recabamos sus datos personales directamente a través del formulario de contacto de nuestro sitio web, correo electrónico, llamadas telefónicas o mensajes de WhatsApp:
+                    </p>
+                    <ul class="list-disc list-inside space-y-1.5 text-slate-700 font-medium ml-2 mb-4">
+                        <li>Nombre completo.</li>
+                        <li>Correo electrónico.</li>
+                        <li>Teléfono de contacto / WhatsApp.</li>
+                        <li>Información técnica o descripción general de sus proyectos o requerimientos de cálculo estructural.</li>
+                    </ul>
+                    <div class="p-4 rounded-xl bg-amber-50 border-l-4 border-amber-500 text-amber-950 text-xs sm:text-sm">
+                        <strong>Aclaración sobre datos sensibles:</strong> No recabamos datos personales sensibles (como datos financieros, de salud o biométricos) a través de nuestra página web.
+                    </div>
+                </section>
+
+                <!-- 2. Finalidades -->
+                <section class="border-l-4 border-slate-300 pl-4 sm:pl-6">
+                    <h3 class="text-lg font-bold text-tech-900 mb-2">2. FINALIDADES DEL TRATAMIENTO DE LOS DATOS</h3>
+                    <p class="mb-2">
+                        Sus datos personales serán utilizados exclusivamente para las siguientes <strong>finalidades primarias</strong>, necesarias para el servicio solicitado:
+                    </p>
+                    <ul class="list-disc list-inside space-y-1 text-slate-700 ml-2 mb-4">
+                        <li>Atender sus dudas, solicitudes de información o requerimientos de cotización de cálculo estructural.</li>
+                        <li>Dar seguimiento a sus proyectos de ingeniería y ponernos en contacto con usted.</li>
+                        <li>Formalizar, en su caso, la relación contractual para la prestación de servicios profesionales de cálculo y diseño estructural.</li>
+                    </ul>
+                    <p class="text-xs sm:text-sm text-slate-600 bg-slate-50 p-3 rounded-lg border border-slate-200">
+                        <strong>Finalidades secundarias:</strong> No utilizamos sus datos personales para mercadotecnia masiva, publicidad de terceros ni prospección comercial no solicitada.
+                    </p>
+                </section>
+
+                <!-- 3. Cookies -->
+                <section class="border-l-4 border-slate-300 pl-4 sm:pl-6">
+                    <h3 class="text-lg font-bold text-tech-900 mb-2">3. USO DE COOKIES Y HERRAMIENTAS DE RASTREO</h3>
+                    <p>
+                        Nuestro sitio web <strong>no utiliza cookies, web beacons u otras tecnologías de rastreo</strong> para monitorear su comportamiento de navegación ni recopilar información analítica de los usuarios.
+                    </p>
+                </section>
+
+                <!-- 4. Transferencia -->
+                <section class="border-l-4 border-slate-300 pl-4 sm:pl-6">
+                    <h3 class="text-lg font-bold text-tech-900 mb-2">4. TRANSFERENCIA DE DATOS PERSONALES</h3>
+                    <p>
+                        Sus datos personales <strong>no serán vendidos, cedidos ni transferidos a terceros</strong> dentro ni fuera del país, salvo mandato de autoridad competente o para el cumplimiento de obligaciones legales derivadas de la LFPDPPP.
+                    </p>
+                </section>
+
+                <!-- 5. Cambios -->
+                <section class="border-l-4 border-slate-300 pl-4 sm:pl-6">
+                    <h3 class="text-lg font-bold text-tech-900 mb-2">5. CAMBIOS AL AVISO DE PRIVACIDAD</h3>
+                    <p>
+                        El presente aviso de privacidad puede sufrir modificaciones derivadas de requerimientos legales o de cambios en nuestro modelo de servicios. Cualquier actualización estará disponible para su consulta directamente en este sitio web.
+                    </p>
+                </section>
+            </div>
+        </article>
+
+        <!-- ================= SECCIÓN 3: DERECHOS ARCO (BLOQUE DEDICADO) ================= -->
+        <article id="derechos-arco" class="seccion-legal bg-white rounded-3xl p-6 sm:p-12 shadow-md border-2 border-blue-600/30 transition-all">
+            <div class="border-b border-slate-200 pb-6 mb-8">
+                <div class="inline-flex items-center gap-1.5 px-3 py-1 rounded bg-blue-100 text-tech-accent text-xs font-bold tracking-wider uppercase mb-2">
+                    <i class="fa-solid fa-user-lock"></i> Sección 3 de 3
+                </div>
+                <h2 class="text-2xl sm:text-3xl font-extrabold text-tech-900 tracking-tight">DERECHOS ARCO Y REVOCACIÓN DEL CONSENTIMIENTO</h2>
+                <p class="text-slate-500 text-sm mt-1">Mecanismo oficial para ejercer los derechos de Acceso, Rectificación, Cancelación u Oposición.</p>
+            </div>
+
+            <div class="space-y-6 text-slate-700 text-sm sm:text-base leading-relaxed">
+                <p>
+                    Usted tiene derecho a conocer qué datos personales tenemos de usted, para qué los utilizamos y las condiciones del uso que les damos (<strong>Acceso</strong>). Asimismo, es su derecho solicitar la corrección de su información personal (<strong>Rectificación</strong>), que la eliminemos de nuestros registros (<strong>Cancelación</strong>), u oponerse al uso de sus datos para fines específicos (<strong>Oposición</strong>).
+                </p>
+
+                <!-- Cuadro de procedimiento -->
+                <div class="bg-slate-900 text-white p-6 sm:p-8 rounded-2xl shadow-lg border border-slate-800">
+                    <h3 class="text-lg font-bold text-white mb-2 flex items-center gap-2">
+                        <i class="fa-solid fa-envelope-open-text text-tech-accent"></i> Procedimiento para Solicitar Derechos ARCO
+                    </h3>
+                    <p class="text-slate-300 text-xs sm:text-sm mb-4">
+                        Para ejercer sus derechos ARCO o revocar su consentimiento, deberá enviar una solicitud formal al correo electrónico: 
+                        <a href="mailto:Inacivix@gmail.com" class="text-blue-400 font-mono font-bold underline">Inacivix@gmail.com</a>, incluyendo los siguientes 3 requisitos:
+                    </p>
+
+                    <div class="space-y-3 text-xs sm:text-sm">
+                        <div class="flex items-start gap-3 bg-slate-800/80 p-3.5 rounded-xl border border-slate-700">
+                            <span class="w-6 h-6 rounded-full bg-tech-accent text-white font-bold text-xs flex items-center justify-center shrink-0 mt-0.5">1</span>
+                            <div>
+                                <strong class="text-white block">Datos de Identificación del Titular:</strong>
+                                <span class="text-slate-300">Nombre completo y medio de contacto (correo electrónico o teléfono para recibir la notificación).</span>
+                            </div>
+                        </div>
+
+                        <div class="flex items-start gap-3 bg-slate-800/80 p-3.5 rounded-xl border border-slate-700">
+                            <span class="w-6 h-6 rounded-full bg-tech-accent text-white font-bold text-xs flex items-center justify-center shrink-0 mt-0.5">2</span>
+                            <div>
+                                <strong class="text-white block">Acreditación de Identidad:</strong>
+                                <span class="text-slate-300">Documento oficial digitalizado que acredite la identidad del titular o de su representación legal.</span>
+                            </div>
+                        </div>
+
+                        <div class="flex items-start gap-3 bg-slate-800/80 p-3.5 rounded-xl border border-slate-700">
+                            <span class="w-6 h-6 rounded-full bg-tech-accent text-white font-bold text-xs flex items-center justify-center shrink-0 mt-0.5">3</span>
+                            <div>
+                                <strong class="text-white block">Descripción de la Solicitud:</strong>
+                                <span class="text-slate-300">Descripción clara y precisa del derecho ARCO que desea ejercer y los datos específicos sobre los que recae.</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Tiempos de respuesta legales -->
+                <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 pt-2">
+                    <div class="p-5 rounded-2xl bg-blue-50 border border-blue-200">
+                        <span class="text-xs font-bold uppercase tracking-wider text-blue-900 block mb-1">
+                            <i class="fa-regular fa-clock mr-1"></i> Plazo de Respuesta
+                        </span>
+                        <p class="text-sm text-blue-950">
+                            Su solicitud será atendida en un plazo máximo de <strong>20 días hábiles</strong> contados a partir de su recepción oficial.
+                        </p>
+                    </div>
+
+                    <div class="p-5 rounded-2xl bg-emerald-50 border border-emerald-200">
+                        <span class="text-xs font-bold uppercase tracking-wider text-emerald-900 block mb-1">
+                            <i class="fa-solid fa-check-double mr-1"></i> Plazo de Ejecución
+                        </span>
+                        <p class="text-sm text-emerald-950">
+                            De resultar procedente, la medida se hará efectiva dentro de los <strong>15 días hábiles</strong> siguientes a la respuesta.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </article>
+
+        <!-- Bloque de Contacto / Regresar -->
+        <div class="bg-tech-900 text-white rounded-3xl p-8 border border-slate-800 shadow-xl flex flex-col md:flex-row items-center justify-between gap-6">
+            <div>
+                <h4 class="text-xl font-bold mb-1">¿Tienes un proyecto estructural que deseas calcular?</h4>
+                <p class="text-slate-400 text-sm">Atención a proyectos en Cancún, la Riviera Maya y en modalidad remota para todo México.</p>
+            </div>
+            <div class="flex flex-col sm:flex-row gap-3 w-full md:w-auto">
+                <a href="mailto:Inacivix@gmail.com" class="px-6 py-3 rounded-xl bg-tech-accent hover:bg-tech-accentHover text-white text-xs sm:text-sm font-bold text-center transition-all shadow-md flex items-center justify-center gap-2">
+                    <i class="fa-regular fa-envelope"></i> Inacivix@gmail.com
+                </a>
+                <a href="index.html" class="px-6 py-3 rounded-xl bg-slate-800 hover:bg-slate-700 text-white text-xs sm:text-sm font-semibold text-center border border-slate-700 transition-all flex items-center justify-center gap-2">
+                    <i class="fa-solid fa-arrow-left"></i> Volver a la Web
+                </a>
+            </div>
+        </div>
+
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-tech-900 border-t border-slate-800 py-10 text-slate-400 text-sm">
+        <div class="max-w-7xl mx-auto px-4 flex flex-col md:flex-row justify-between items-center gap-6">
+            <div class="text-center md:text-left">
+                <p class="font-semibold text-slate-300">Inacivil · Ingeniería y Cálculo Estructural</p>
+                <p class="text-xs text-slate-500 mt-1">&copy; 2026 Inacivil. Luis Alberto Alam Valenzuela. Todos los derechos reservados.</p>
+            </div>
+
+            <div class="flex items-center space-x-6 text-xs sm:text-sm">
+                <a href="index.html" class="hover:text-tech-accent transition-colors">Inicio</a>
+                <span class="text-slate-700">|</span>
+                <a href="#aviso-legal" class="jump-btn hover:text-tech-accent transition-colors">Términos de Uso</a>
+                <span class="text-slate-700">|</span>
+                <a href="#aviso-privacidad" class="jump-btn hover:text-tech-accent transition-colors">Privacidad</a>
+                <span class="text-slate-700">|</span>
+                <a href="#derechos-arco" class="jump-btn text-tech-accent font-semibold">ARCO</a>
+            </div>
+
+            <div class="flex space-x-4">
+                <a href="https://www.linkedin.com/in/inacivil-work-688a6b404" target="_blank" rel="noopener noreferrer" class="hover:text-white transition-colors" aria-label="LinkedIn"><i class="fa-brands fa-linkedin text-xl"></i></a>
+                <a href="https://instagram.com/inacivil" target="_blank" rel="noopener noreferrer" class="hover:text-white transition-colors" aria-label="Instagram"><i class="fa-brands fa-instagram text-xl"></i></a>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Scripts JavaScript para Desplazamiento Fluido y Preciso -->
+    <script>
+        // Control de menú móvil
+        const menuBtn = document.getElementById('menu-toggle-btn');
+        const mobileMenu = document.getElementById('mobile-menu');
+        const menuIcon = document.getElementById('menu-icon');
+
+        menuBtn.addEventListener('click', () => {
+            const isOpen = !mobileMenu.classList.contains('hidden');
+            if (isOpen) {
+                mobileMenu.classList.add('hidden');
+                menuIcon.classList.remove('fa-xmark');
+                menuIcon.classList.add('fa-bars');
+            } else {
+                mobileMenu.classList.remove('hidden');
+                menuIcon.classList.remove('fa-bars');
+                menuIcon.classList.add('fa-xmark');
+            }
+        });
+
+        // Función universal de salto suave con cálculo de offset
+        const scrollToSection = (targetId) => {
+            const targetElement = document.getElementById(targetId);
+            if (!targetElement) return;
+
+            // Altura de navbars fijas (80px nav + 56px barra de botones + 20px respiro)
+            const headerHeight = 155;
+            const elementPosition = targetElement.getBoundingClientRect().top;
+            const offsetPosition = elementPosition + window.pageYOffset - headerHeight;
+
+            window.scrollTo({
+                top: offsetPosition,
+                behavior: 'smooth'
+            });
+
+            // Resaltar visualmente la tarjeta de destino
+            targetElement.classList.remove('target-highlight');
+            void targetElement.offsetWidth;
+            targetElement.classList.add('target-highlight');
+
+            // Cerrar menú móvil si está desplegado
+            if (!mobileMenu.classList.contains('hidden')) {
+                mobileMenu.classList.add('hidden');
+                menuIcon.classList.remove('fa-xmark');
+                menuIcon.classList.add('fa-bars');
+            }
+        };
+
+        // Escucha de clics en todos los botones y enlaces de salto
+        document.querySelectorAll('.jump-btn, .nav-jump').forEach(link => {
+            link.addEventListener('click', (e) => {
+                const href = link.getAttribute('href');
+                if (href && href.startsWith('#')) {
+                    e.preventDefault();
+                    scrollToSection(href.substring(1));
+                }
+            });
+        });
+
+        // Detección automática al cargar la página con hash (ej. privacidad.html#derechos-arco)
+        window.addEventListener('load', () => {
+            if (window.location.hash) {
+                const initialTarget = window.location.hash.substring(1);
+                setTimeout(() => scrollToSection(initialTarget), 250);
+            }
+        });
+    </script>
+</body>
+</html>

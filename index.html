@@ -42,28 +42,28 @@
     <!-- Script CDN de model-viewer para visor 3D -->
     <script type="module" src="https://ajax.googleapis.com/ajax/libs/model-viewer/3.4.0/model-viewer.min.js"></script>
 
-    <!-- Estilos CSS para las nuevas secciones -->
+    <!-- Estilos CSS -->
     <style>
         /* Estilos para el Visor 3D */
         .model-viewer-container {
             position: relative;
-            background-color: #1a202c; /* Fondo sobrio/moderno para el visor */
-            border-radius: 1.5rem; /* rounded-3xl */
+            background-color: #1a202c;
+            border-radius: 1.5rem;
             overflow: hidden;
-            box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05); /* shadow-xl */
-            border: 1px solid rgba(49, 62, 85, 0.5); /* Borde sutil */
+            box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+            border: 1px solid rgba(49, 62, 85, 0.5);
         }
         model-viewer {
             width: 100%;
-            height: 500px; /* Altura fija para el visor */
-            --controls-display: flex; /* Mostrar controles */
-            --poster-color: #1a202c; /* Color del póster mientras carga */
-            --progress-bar-color: #2563eb; /* Color de la barra de progreso */
-            --progress-bar-background-color: #4a5568; /* Color de fondo de la barra de progreso */
+            height: 500px;
+            --controls-display: flex;
+            --poster-color: #1a202c;
+            --progress-bar-color: #2563eb;
+            --progress-bar-background-color: #4a5568;
         }
         @media (max-width: 768px) {
             model-viewer {
-                height: 350px; /* Altura ajustada para móviles */
+                height: 350px;
             }
         }
 
@@ -72,23 +72,22 @@
             display: flex;
             justify-content: center;
             align-items: center;
-            padding: 2.5rem 0; /* py-10 */
-            background-color: #f8fafc; /* bg-slate-50 */
+            padding: 2.5rem 0;
+            background-color: #f8fafc;
         }
         .mapa-svg {
             width: 100%;
-            max-width: 900px; /* Ancho máximo para el mapa */
+            max-width: 900px;
             height: auto;
-            border-radius: 1rem; /* rounded-xl */
-            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06); /* shadow-md */
-            border: 1px solid #e2e8f0; /* border-slate-200 */
+            border-radius: 1rem;
+            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+            border: 1px solid #e2e8f0;
             transition: all 0.3s ease;
         }
         .mapa-svg:hover {
-            box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05); /* shadow-lg */
+            box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
             transform: translateY(-2px);
         }
-        /* Asegurar que el SVG sea responsive */
         .mapa-svg object {
             display: block;
             width: 100%;
@@ -113,7 +112,7 @@
                     <a href="#servicios" class="text-slate-300 hover:text-white transition-colors text-sm font-semibold uppercase tracking-wider">Servicios</a>
                     <a href="#portafolio" class="text-slate-300 hover:text-white transition-colors text-sm font-semibold uppercase tracking-wider">Proyectos</a>
                     <a href="#visor-3d" class="text-slate-300 hover:text-white transition-colors text-sm font-semibold uppercase tracking-wider">Visor 3D</a>
-                    <a href="#inspecciones" class="text-slate-300 hover:text-white transition-colors text-sm font-semibold uppercase tracking-wider">Inspecciones</a><!-- Nuevo enlace -->
+                    <a href="#inspecciones" class="text-slate-300 hover:text-white transition-colors text-sm font-semibold uppercase tracking-wider">Inspecciones</a>
                     <a href="#cobertura" class="text-slate-300 hover:text-white transition-colors text-sm font-semibold uppercase tracking-wider">Cobertura</a>
                     <a href="#contacto" class="text-slate-300 hover:text-white transition-colors text-sm font-semibold uppercase tracking-wider">Contacto</a>
                     <a href="https://instagram.com/inacivil" target="_blank" rel="noopener noreferrer" class="text-slate-300 hover:text-pink-400 transition-colors flex items-center gap-1.5 text-sm font-semibold">
@@ -121,7 +120,7 @@
                     </a>
                 </div>
 
-                <!-- Botón de 3 líneas horizontales para celular -->
+                <!-- Botón de menú para celular -->
                 <div class="md:hidden">
                     <button id="menu-toggle-btn" class="text-slate-300 hover:text-white p-2.5 rounded-lg bg-slate-800 border border-slate-700 focus:outline-none" aria-label="Abrir menú">
                         <i id="menu-icon" class="fa-solid fa-bars text-2xl"></i>
@@ -134,7 +133,6 @@
         <div id="mobile-menu" class="hidden md:hidden border-t border-slate-800 bg-slate-950/95 px-4 pt-4 pb-6 space-y-3">
             <p class="text-xs font-bold uppercase tracking-wider text-slate-400 px-1">Acceso Rápido</p>
             
-            <!-- 1. Proyectos -->
             <a href="#portafolio" class="mobile-link flex items-center justify-between p-3 rounded-xl bg-blue-600/15 border border-blue-500/30 text-white hover:bg-blue-600/25 transition-all">
                 <div class="flex items-center gap-3">
                     <i class="fa-solid fa-briefcase text-blue-400 text-lg"></i>
@@ -143,7 +141,6 @@
                 <i class="fa-solid fa-chevron-right text-blue-400 text-sm"></i>
             </a>
 
-            <!-- 2. Visor 3D -->
             <a href="#visor-3d" class="mobile-link flex items-center justify-between p-3 rounded-xl bg-purple-600/15 border border-purple-500/30 text-white hover:bg-purple-600/25 transition-all">
                 <div class="flex items-center gap-3">
                     <i class="fa-solid fa-cube text-purple-400 text-lg"></i>
@@ -152,7 +149,6 @@
                 <i class="fa-solid fa-chevron-right text-purple-400 text-sm"></i>
             </a>
 
-            <!-- 3. Inspecciones (Nuevo enlace en menú móvil) -->
             <a href="#inspecciones" class="mobile-link flex items-center justify-between p-3 rounded-xl bg-yellow-600/15 border border-yellow-500/30 text-white hover:bg-yellow-600/25 transition-all">
                 <div class="flex items-center gap-3">
                     <i class="fa-solid fa-microscope text-yellow-400 text-lg"></i>
@@ -161,7 +157,6 @@
                 <i class="fa-solid fa-chevron-right text-yellow-400 text-sm"></i>
             </a>
 
-            <!-- 4. Cobertura -->
             <a href="#cobertura" class="mobile-link flex items-center justify-between p-3 rounded-xl bg-orange-600/15 border border-orange-500/30 text-white hover:bg-orange-600/25 transition-all">
                 <div class="flex items-center gap-3">
                     <i class="fa-solid fa-map-marked-alt text-orange-400 text-lg"></i>
@@ -170,7 +165,6 @@
                 <i class="fa-solid fa-chevron-right text-orange-400 text-sm"></i>
             </a>
 
-            <!-- 5. Contacto -->
             <a href="#contacto" class="mobile-link flex items-center justify-between p-3 rounded-xl bg-emerald-600/15 border border-emerald-500/30 text-white hover:bg-emerald-600/25 transition-all">
                 <div class="flex items-center gap-3">
                     <i class="fa-solid fa-envelope text-emerald-400 text-lg"></i>
@@ -179,7 +173,6 @@
                 <i class="fa-solid fa-chevron-right text-emerald-400 text-sm"></i>
             </a>
 
-            <!-- 6. Instagram -->
             <a href="https://instagram.com/inacivil" target="_blank" rel="noopener noreferrer" class="mobile-link flex items-center justify-between p-3 rounded-xl bg-pink-600/15 border border-pink-500/30 text-white hover:bg-pink-600/25 transition-all">
                 <div class="flex items-center gap-3">
                     <i class="fa-brands fa-instagram text-pink-400 text-xl"></i>
@@ -188,13 +181,11 @@
                 <i class="fa-solid fa-arrow-up-right-from-square text-pink-400 text-xs"></i>
             </a>
 
-            <!-- Enlaces adicionales -->
             <div class="pt-3 border-t border-slate-800/80 flex gap-2">
                 <a href="#inicio" class="mobile-link flex-1 text-center py-2 rounded-lg bg-slate-800 text-slate-300 hover:text-white text-sm">Inicio</a>
                 <a href="#servicios" class="mobile-link flex-1 text-center py-2 rounded-lg bg-slate-800 text-slate-300 hover:text-white text-sm">Servicios</a>
             </div>
             
-            <!-- WhatsApp directo -->
             <a href="https://wa.me/529981589774" target="_blank" rel="noopener noreferrer" class="w-full flex items-center justify-center gap-2 p-3 bg-emerald-600 hover:bg-emerald-500 text-white rounded-xl font-bold text-sm">
                 <i class="fa-brands fa-whatsapp text-lg"></i> WhatsApp (+52 998 158 9774)
             </a>
@@ -294,15 +285,10 @@
 
             <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
                 <div class="relative w-full aspect-video md:aspect-[16/9] bg-slate-100 rounded-3xl overflow-hidden shadow-xl border border-slate-200">
-                    <!-- Contenedor para la animación de rayos X -->
+                    <!-- Contenedor para animación de rayos X -->
                     <div id="xray-container" class="relative w-full h-full cursor-none">
-                        <!-- IMAGEN DE COLUMNA EXTERIOR CON RUTA LOCAL -->
                         <img src="imagenes/columna_1.jpg" alt="Columna de Concreto Exterior" class="absolute inset-0 w-full h-full object-cover">
-                        
-                        <!-- IMAGEN DE COLUMNA INTERIOR (ARMADO) CON RUTA LOCAL -->
                         <img src="imagenes/columna_2.jpg" alt="Columna de Concreto Interior" class="absolute inset-0 w-full h-full object-cover" id="xray-inner">
-
-                        <!-- Círculo de la lupa (inicialmente oculto y se mueve con el mouse) -->
                         <div id="xray-magnifier" class="absolute bg-transparent rounded-full border-4 border-blue-500 hidden pointer-events-none z-10"></div>
                     </div>
                 </div>
@@ -343,7 +329,7 @@
         </div>
     </section>
 
-    <!-- SECCIÓN DE COBERTERA / MAPA DE MÉXICO -->
+    <!-- SECCIÓN DE COBERTURA / MAPA DE MÉXICO -->
     <section id="cobertura" class="py-24 bg-slate-50">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="text-center max-w-3xl mx-auto mb-16">
@@ -461,16 +447,101 @@
         </div>
     </section>
 
-    <!-- Sección Contacto (#contacto) -->
+    <!-- Sección Contacto (#contacto) con Formulario -->
     <section id="contacto" class="py-24 bg-tech-900 text-white relative overflow-hidden">
-        <div class="relative max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-            <h2 class="text-3xl md:text-5xl font-bold mb-6">¿Listo para calcular tu próximo proyecto?</h2>
-            <p class="text-slate-300 text-lg mb-12 max-w-2xl mx-auto">
-                Escríbeme para discutir los detalles técnicos de tu obra. Atención a proyectos en Cancún y modalidad remota para todo México.
-            </p>
+        <div class="relative max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center max-w-2xl mx-auto mb-12">
+                <h2 class="text-3xl md:text-5xl font-bold mb-4">¿Listo para calcular tu próximo proyecto?</h2>
+                <p class="text-slate-300 text-lg">
+                    Escríbeme para discutir los detalles técnicos de tu obra. Atención a proyectos en Cancún y modalidad remota para todo México.
+                </p>
+            </div>
+
+            <!-- Formulario de Contacto -->
+            <div class="bg-slate-800/80 border border-slate-700/80 rounded-2xl p-6 sm:p-10 shadow-2xl backdrop-blur-sm mb-12">
+                <div class="mb-6 border-b border-slate-700/60 pb-4">
+                    <h3 class="text-2xl font-bold text-white flex items-center gap-2">
+                        <i class="fa-solid fa-file-pen text-tech-accent"></i> Solicitar Información / Cotización
+                    </h3>
+                    <p class="text-sm text-slate-400 mt-1">Completa los datos del proyecto y te responderemos a la brevedad.</p>
+                </div>
+
+                <form id="contact-form" class="space-y-6">
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                        <div>
+                            <label for="form-name" class="block text-sm font-semibold text-slate-200 mb-2">
+                                Nombre completo <span class="text-blue-400">*</span>
+                            </label>
+                            <div class="relative">
+                                <span class="absolute inset-y-0 left-0 pl-3.5 flex items-center pointer-events-none text-slate-400">
+                                    <i class="fa-solid fa-user text-sm"></i>
+                                </span>
+                                <input 
+                                    type="text" 
+                                    id="form-name" 
+                                    name="nombre" 
+                                    required 
+                                    placeholder="Ing. Carlos Mendoza" 
+                                    class="w-full pl-10 pr-4 py-3 bg-slate-900/90 border border-slate-700 rounded-xl text-white placeholder-slate-500 focus:outline-none focus:ring-2 focus:ring-tech-accent focus:border-transparent transition-all"
+                                >
+                            </div>
+                        </div>
+
+                        <div>
+                            <label for="form-email" class="block text-sm font-semibold text-slate-200 mb-2">
+                                Correo electrónico de contacto <span class="text-blue-400">*</span>
+                            </label>
+                            <div class="relative">
+                                <span class="absolute inset-y-0 left-0 pl-3.5 flex items-center pointer-events-none text-slate-400">
+                                    <i class="fa-solid fa-envelope text-sm"></i>
+                                </span>
+                                <input 
+                                    type="email" 
+                                    id="form-email" 
+                                    name="correo" 
+                                    required 
+                                    placeholder="carlos@ejemplo.com" 
+                                    class="w-full pl-10 pr-4 py-3 bg-slate-900/90 border border-slate-700 rounded-xl text-white placeholder-slate-500 focus:outline-none focus:ring-2 focus:ring-tech-accent focus:border-transparent transition-all"
+                                >
+                            </div>
+                        </div>
+                    </div>
+
+                    <div>
+                        <label for="form-project" class="block text-sm font-semibold text-slate-200 mb-2">
+                            Detalles del proyecto <span class="text-blue-400">*</span>
+                        </label>
+                        <div class="relative">
+                            <span class="absolute top-3.5 left-3.5 pointer-events-none text-slate-400">
+                                <i class="fa-solid fa-building text-sm"></i>
+                            </span>
+                            <textarea 
+                                id="form-project" 
+                                name="proyecto" 
+                                rows="4" 
+                                required 
+                                placeholder="Describe brevemente el tipo de obra (ej. Casa habitación 3 niveles, nave industrial, revisión estructural, ubicación aproximada...)" 
+                                class="w-full pl-10 pr-4 py-3 bg-slate-900/90 border border-slate-700 rounded-xl text-white placeholder-slate-500 focus:outline-none focus:ring-2 focus:ring-tech-accent focus:border-transparent transition-all resize-none"
+                            ></textarea>
+                        </div>
+                    </div>
+
+                    <div class="flex flex-col sm:flex-row justify-end items-center gap-4 pt-2">
+                        <span id="form-status" class="text-sm font-medium hidden"></span>
+                        <button 
+                            type="submit" 
+                            class="w-full sm:w-auto px-8 py-3.5 bg-tech-accent hover:bg-tech-accentHover text-white font-bold rounded-xl transition-all shadow-lg shadow-blue-900/50 flex items-center justify-center gap-2 group"
+                        >
+                            <span>Enviar Solicitud</span>
+                            <i class="fa-solid fa-paper-plane text-sm group-hover:translate-x-1 transition-transform"></i>
+                        </button>
+                    </div>
+                </form>
+            </div>
             
+            <!-- Canales Directos -->
             <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
-                <div class="bg-slate-800/50 border border-slate-700 rounded-xl p-6 flex flex-col items-center">
+                <div class="bg-slate-800/50 border border-slate-700 rounded-xl p-6 flex flex-col items-center text-center">
                     <div class="w-12 h-12 bg-tech-accent/20 rounded-full flex items-center justify-center mb-4">
                         <i class="fa-brands fa-whatsapp text-2xl text-green-400"></i>
                     </div>
@@ -478,7 +549,7 @@
                     <a href="https://wa.me/529981589774" target="_blank" class="font-semibold text-lg hover:text-green-400 transition-colors">+52 (998) 158 9774</a>
                 </div>
 
-                <div class="bg-slate-800/50 border border-slate-700 rounded-xl p-6 flex flex-col items-center">
+                <div class="bg-slate-800/50 border border-slate-700 rounded-xl p-6 flex flex-col items-center text-center">
                     <div class="w-12 h-12 bg-tech-accent/20 rounded-full flex items-center justify-center mb-4">
                         <i class="fa-regular fa-envelope text-2xl text-blue-400"></i>
                     </div>
@@ -486,7 +557,7 @@
                     <a href="mailto:inacivix@gmail.com" class="font-semibold text-lg hover:text-blue-400 transition-colors">inacivix@gmail.com</a>
                 </div>
 
-                <div class="bg-slate-800/50 border border-slate-700 rounded-xl p-6 flex flex-col items-center">
+                <div class="bg-slate-800/50 border border-slate-700 rounded-xl p-6 flex flex-col items-center text-center">
                     <div class="w-12 h-12 bg-tech-accent/20 rounded-full flex items-center justify-center mb-4">
                         <i class="fa-solid fa-location-dot text-2xl text-red-400"></i>
                     </div>
@@ -506,19 +577,33 @@
         </div>
     </section>
 
-    <!-- Footer -->
-    <footer class="bg-tech-900 border-t border-slate-800 py-8 text-center text-slate-400 text-sm">
-        <div class="max-w-7xl mx-auto px-4 flex flex-col md:flex-row justify-between items-center">
+    <!-- Footer con Hipervínculos a la Subpágina de Privacidad -->
+    <footer class="bg-tech-900 border-t border-slate-800 py-10 text-slate-400 text-sm">
+        <div class="max-w-7xl mx-auto px-4 flex flex-col md:flex-row justify-between items-center gap-6">
             <p>&copy; 2026 Inacivil. Todos los derechos reservados.</p>
-            <div class="flex space-x-4 mt-4 md:mt-0">
+            
+            <!-- Hipervínculos hacia la subpágina privacidad.html -->
+            <div class="flex items-center space-x-6 text-xs sm:text-sm">
+                <a href="privacidad.html#aviso-privacidad" class="hover:text-tech-accent transition-colors underline-offset-4 hover:underline">
+                    Aviso de Privacidad
+                </a>
+                <span class="text-slate-600">|</span>
+                <a href="privacidad.html#aviso-legal" class="hover:text-tech-accent transition-colors underline-offset-4 hover:underline">
+                    Términos y Condiciones
+                </a>
+            </div>
+
+            <!-- Redes sociales -->
+            <div class="flex space-x-4">
                 <a href="https://www.linkedin.com/in/inacivil-work-688a6b404" target="_blank" rel="noopener noreferrer" class="hover:text-white transition-colors" aria-label="LinkedIn"><i class="fa-brands fa-linkedin text-xl"></i></a>
                 <a href="https://instagram.com/inacivil" target="_blank" rel="noopener noreferrer" class="hover:text-white transition-colors" aria-label="Instagram"><i class="fa-brands fa-instagram text-xl"></i></a>
             </div>
         </div>
     </footer>
 
-    <!-- Script JavaScript para controlar el menú móvil de 3 líneas -->
+    <!-- Scripts JavaScript -->
     <script>
+        // Menú móvil
         const menuBtn = document.getElementById('menu-toggle-btn');
         const mobileMenu = document.getElementById('mobile-menu');
         const menuIcon = document.getElementById('menu-icon');
@@ -537,7 +622,6 @@
             }
         });
 
-        // Cerrar menú automáticamente al pulsar cualquiera de los enlaces
         mobileLinks.forEach(link => {
             link.addEventListener('click', () => {
                 mobileMenu.classList.add('hidden');
@@ -545,16 +629,34 @@
                 menuIcon.classList.add('fa-bars');
             });
         });
-    </script>
 
-    <!-- Script para la animación de Rayos X -->
-    <script>
+        // Formulario de Contacto
+        const contactForm = document.getElementById('contact-form');
+        const formStatus = document.getElementById('form-status');
+
+        if (contactForm) {
+            contactForm.addEventListener('submit', (e) => {
+                e.preventDefault();
+                const name = document.getElementById('form-name').value;
+                const email = document.getElementById('form-email').value;
+                const project = document.getElementById('form-project').value;
+
+                const subject = encodeURIComponent(`Consulta de Proyecto: ${name}`);
+                const body = encodeURIComponent(`Hola Inacivil,\n\nMi nombre es: ${name}\nCorreo de contacto: ${email}\n\nDetalles del Proyecto:\n${project}`);
+                
+                formStatus.className = "text-sm text-green-400 font-medium block";
+                formStatus.textContent = "Preparando mensaje...";
+                
+                window.location.href = `mailto:inacivix@gmail.com?subject=${subject}&body=${body}`;
+            });
+        }
+
+        // Animación de Rayos X
         const xrayContainer = document.getElementById('xray-container');
         const xrayInner = document.getElementById('xray-inner');
         const xrayMagnifier = document.getElementById('xray-magnifier');
-        const magnifierSize = 150; // Tamaño del círculo de la lupa en píxeles
+        const magnifierSize = 150;
 
-        // Ocultar la imagen interior por defecto
         xrayInner.style.clipPath = `circle(0px at 0 0)`;
 
         xrayContainer.addEventListener('mouseenter', () => {
@@ -563,35 +665,29 @@
 
         xrayContainer.addEventListener('mouseleave', () => {
             xrayMagnifier.classList.add('hidden');
-            // Resetear el clip-path para ocultar el interior cuando el mouse sale
             xrayInner.style.clipPath = `circle(0px at 0 0)`;
         });
 
         xrayContainer.addEventListener('mousemove', (e) => {
             const rect = xrayContainer.getBoundingClientRect();
-            const x = e.clientX - rect.left; // Coordenada X relativa al contenedor
-            const y = e.clientY - rect.top;  // Coordenada Y relativa al contenedor
+            const x = e.clientX - rect.left;
+            const y = e.clientY - rect.top;
 
-            // Asegurarse de que el magnificador no se salga de los bordes del contenedor
             let magnifierX = x - magnifierSize / 2;
             let magnifierY = y - magnifierSize / 2;
 
             magnifierX = Math.max(0, Math.min(magnifierX, rect.width - magnifierSize));
             magnifierY = Math.max(0, Math.min(magnifierY, rect.height - magnifierSize));
 
-            // Actualizar la posición de la lupa visible (el borde)
             xrayMagnifier.style.width = `${magnifierSize}px`;
             xrayMagnifier.style.height = `${magnifierSize}px`;
             xrayMagnifier.style.transform = `translate(${magnifierX}px, ${magnifierY}px)`;
 
-            // Actualizar el clip-path de la imagen interior
-            // El clip-path debe centrarse en la posición original del mouse (x, y)
             xrayInner.style.clipPath = `circle(${magnifierSize / 2}px at ${x}px ${y}px)`;
         });
 
-        // Soporte táctil para dispositivos móviles (similar a mousemove)
         xrayContainer.addEventListener('touchmove', (e) => {
-            e.preventDefault(); // Evitar el scroll al mover el dedo
+            e.preventDefault();
             const touch = e.touches[0];
             const rect = xrayContainer.getBoundingClientRect();
             const x = touch.clientX - rect.left;
@@ -603,13 +699,13 @@
             magnifierX = Math.max(0, Math.min(magnifierX, rect.width - magnifierSize));
             magnifierY = Math.max(0, Math.min(magnifierY, rect.height - magnifierSize));
 
-            xrayMagnifier.classList.remove('hidden'); // Mostrar la lupa en touch
+            xrayMagnifier.classList.remove('hidden');
             xrayMagnifier.style.width = `${magnifierSize}px`;
             xrayMagnifier.style.height = `${magnifierSize}px`;
             xrayMagnifier.style.transform = `translate(${magnifierX}px, ${magnifierY}px)`;
 
             xrayInner.style.clipPath = `circle(${magnifierSize / 2}px at ${x}px ${y}px)`;
-        }, { passive: false }); // `passive: false` es importante para `preventDefault`
+        }, { passive: false });
 
         xrayContainer.addEventListener('touchend', () => {
             xrayMagnifier.classList.add('hidden');
