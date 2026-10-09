@@ -113,6 +113,7 @@
                     <a href="#servicios" class="text-slate-300 hover:text-white transition-colors text-sm font-semibold uppercase tracking-wider">Servicios</a>
                     <a href="#portafolio" class="text-slate-300 hover:text-white transition-colors text-sm font-semibold uppercase tracking-wider">Proyectos</a>
                     <a href="#visor-3d" class="text-slate-300 hover:text-white transition-colors text-sm font-semibold uppercase tracking-wider">Visor 3D</a>
+                    <a href="#inspecciones" class="text-slate-300 hover:text-white transition-colors text-sm font-semibold uppercase tracking-wider">Inspecciones</a><!-- Nuevo enlace -->
                     <a href="#cobertura" class="text-slate-300 hover:text-white transition-colors text-sm font-semibold uppercase tracking-wider">Cobertura</a>
                     <a href="#contacto" class="text-slate-300 hover:text-white transition-colors text-sm font-semibold uppercase tracking-wider">Contacto</a>
                     <a href="https://instagram.com/inacivil" target="_blank" rel="noopener noreferrer" class="text-slate-300 hover:text-pink-400 transition-colors flex items-center gap-1.5 text-sm font-semibold">
@@ -151,7 +152,16 @@
                 <i class="fa-solid fa-chevron-right text-purple-400 text-sm"></i>
             </a>
 
-            <!-- 3. Cobertura -->
+            <!-- 3. Inspecciones (Nuevo enlace en menú móvil) -->
+            <a href="#inspecciones" class="mobile-link flex items-center justify-between p-3 rounded-xl bg-yellow-600/15 border border-yellow-500/30 text-white hover:bg-yellow-600/25 transition-all">
+                <div class="flex items-center gap-3">
+                    <i class="fa-solid fa-microscope text-yellow-400 text-lg"></i>
+                    <span class="font-bold text-base">Inspecciones</span>
+                </div>
+                <i class="fa-solid fa-chevron-right text-yellow-400 text-sm"></i>
+            </a>
+
+            <!-- 4. Cobertura -->
             <a href="#cobertura" class="mobile-link flex items-center justify-between p-3 rounded-xl bg-orange-600/15 border border-orange-500/30 text-white hover:bg-orange-600/25 transition-all">
                 <div class="flex items-center gap-3">
                     <i class="fa-solid fa-map-marked-alt text-orange-400 text-lg"></i>
@@ -160,7 +170,7 @@
                 <i class="fa-solid fa-chevron-right text-orange-400 text-sm"></i>
             </a>
 
-            <!-- 4. Contacto -->
+            <!-- 5. Contacto -->
             <a href="#contacto" class="mobile-link flex items-center justify-between p-3 rounded-xl bg-emerald-600/15 border border-emerald-500/30 text-white hover:bg-emerald-600/25 transition-all">
                 <div class="flex items-center gap-3">
                     <i class="fa-solid fa-envelope text-emerald-400 text-lg"></i>
@@ -169,7 +179,7 @@
                 <i class="fa-solid fa-chevron-right text-emerald-400 text-sm"></i>
             </a>
 
-            <!-- 5. Instagram -->
+            <!-- 6. Instagram -->
             <a href="https://instagram.com/inacivil" target="_blank" rel="noopener noreferrer" class="mobile-link flex items-center justify-between p-3 rounded-xl bg-pink-600/15 border border-pink-500/30 text-white hover:bg-pink-600/25 transition-all">
                 <div class="flex items-center gap-3">
                     <i class="fa-brands fa-instagram text-pink-400 text-xl"></i>
@@ -272,6 +282,67 @@
         </div>
     </section>
 
+    <!-- Sección de Inspecciones y Diagnóstico Estructural -->
+    <section id="inspecciones" class="py-24 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center max-w-3xl mx-auto mb-16">
+                <h2 class="text-3xl md:text-4xl font-bold text-tech-900 mb-4">Inspecciones y Diagnóstico Estructural</h2>
+                <p class="text-lg text-slate-600">
+                    Evaluación detallada de estructuras existentes para identificar patologías, determinar su capacidad portante y proponer soluciones de refuerzo.
+                </p>
+            </div>
+
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+                <div class="relative w-full aspect-video md:aspect-[16/9] bg-slate-100 rounded-3xl overflow-hidden shadow-xl border border-slate-200">
+                    <!-- Contenedor para la animación de rayos X -->
+                    <div id="xray-container" class="relative w-full h-full cursor-none">
+                        <!-- IMAGEN DE COLUMNA EXTERIOR CON RUTA LOCAL -->
+                        <img src="imagenes/columna_1.jpg" alt="Columna de Concreto Exterior" class="absolute inset-0 w-full h-full object-cover">
+                        
+                        <!-- IMAGEN DE COLUMNA INTERIOR (ARMADO) CON RUTA LOCAL -->
+                        <img src="imagenes/columna_2.jpg" alt="Columna de Concreto Interior" class="absolute inset-0 w-full h-full object-cover" id="xray-inner">
+
+                        <!-- Círculo de la lupa (inicialmente oculto y se mueve con el mouse) -->
+                        <div id="xray-magnifier" class="absolute bg-transparent rounded-full border-4 border-blue-500 hidden pointer-events-none z-10"></div>
+                    </div>
+                </div>
+
+                <div>
+                    <h3 class="text-2xl font-bold text-tech-900 mb-6">Nuestros servicios incluyen:</h3>
+                    <ul class="space-y-6 text-slate-700 text-lg">
+                        <li class="flex items-start gap-3">
+                            <i class="fa-solid fa-microscope text-2xl text-tech-accent mt-1"></i>
+                            <div>
+                                <strong class="block text-tech-900">Evaluación de Daños:</strong> Identificación de fisuras, deformaciones, corrosión y otros deterioros.
+                            </div>
+                        </li>
+                        <li class="flex items-start gap-3">
+                            <i class="fa-solid fa-chart-area text-2xl text-tech-accent mt-1"></i>
+                            <div>
+                                <strong class="block text-tech-900">Análisis No Destructivo:</strong> Uso de técnicas avanzadas para evaluar la calidad del material sin comprometer la estructura.
+                            </div>
+                        </li>
+                        <li class="flex items-start gap-3">
+                            <i class="fa-solid fa-shield-alt text-2xl text-tech-accent mt-1"></i>
+                            <div>
+                                <strong class="block text-tech-900">Propuestas de Refuerzo:</strong> Desarrollo de soluciones técnicas para aumentar la capacidad estructural y prolongar la vida útil.
+                            </div>
+                        </li>
+                        <li class="flex items-start gap-3">
+                            <i class="fa-solid fa-file-invoice text-2xl text-tech-accent mt-1"></i>
+                            <div>
+                                <strong class="block text-tech-900">Informes Técnicos:</strong> Documentación detallada con diagnóstico, análisis y recomendaciones.
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <p class="text-center text-sm text-slate-500 mt-12">
+                <i class="fa-solid fa-info-circle mr-1 text-tech-accent"></i> Pasa el cursor sobre la columna para ver su interior y el armado estructural.
+            </p>
+        </div>
+    </section>
+
     <!-- SECCIÓN DE COBERTERA / MAPA DE MÉXICO -->
     <section id="cobertura" class="py-24 bg-slate-50">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -349,7 +420,7 @@
                                 <span class="text-xs text-blue-300">Acero y Concreto</span>
                             </div>
                         </div>
-                    </div>
+                    </a> 
                     <div class="p-5">
                         <h4 class="font-bold text-tech-900 text-lg">Plaza Comercial</h4>
                         <p class="text-sm text-slate-500 mt-1">Diseño estructural · Acero y concreto reforzado</p>
@@ -473,6 +544,76 @@
                 menuIcon.classList.remove('fa-xmark');
                 menuIcon.classList.add('fa-bars');
             });
+        });
+    </script>
+
+    <!-- Script para la animación de Rayos X -->
+    <script>
+        const xrayContainer = document.getElementById('xray-container');
+        const xrayInner = document.getElementById('xray-inner');
+        const xrayMagnifier = document.getElementById('xray-magnifier');
+        const magnifierSize = 150; // Tamaño del círculo de la lupa en píxeles
+
+        // Ocultar la imagen interior por defecto
+        xrayInner.style.clipPath = `circle(0px at 0 0)`;
+
+        xrayContainer.addEventListener('mouseenter', () => {
+            xrayMagnifier.classList.remove('hidden');
+        });
+
+        xrayContainer.addEventListener('mouseleave', () => {
+            xrayMagnifier.classList.add('hidden');
+            // Resetear el clip-path para ocultar el interior cuando el mouse sale
+            xrayInner.style.clipPath = `circle(0px at 0 0)`;
+        });
+
+        xrayContainer.addEventListener('mousemove', (e) => {
+            const rect = xrayContainer.getBoundingClientRect();
+            const x = e.clientX - rect.left; // Coordenada X relativa al contenedor
+            const y = e.clientY - rect.top;  // Coordenada Y relativa al contenedor
+
+            // Asegurarse de que el magnificador no se salga de los bordes del contenedor
+            let magnifierX = x - magnifierSize / 2;
+            let magnifierY = y - magnifierSize / 2;
+
+            magnifierX = Math.max(0, Math.min(magnifierX, rect.width - magnifierSize));
+            magnifierY = Math.max(0, Math.min(magnifierY, rect.height - magnifierSize));
+
+            // Actualizar la posición de la lupa visible (el borde)
+            xrayMagnifier.style.width = `${magnifierSize}px`;
+            xrayMagnifier.style.height = `${magnifierSize}px`;
+            xrayMagnifier.style.transform = `translate(${magnifierX}px, ${magnifierY}px)`;
+
+            // Actualizar el clip-path de la imagen interior
+            // El clip-path debe centrarse en la posición original del mouse (x, y)
+            xrayInner.style.clipPath = `circle(${magnifierSize / 2}px at ${x}px ${y}px)`;
+        });
+
+        // Soporte táctil para dispositivos móviles (similar a mousemove)
+        xrayContainer.addEventListener('touchmove', (e) => {
+            e.preventDefault(); // Evitar el scroll al mover el dedo
+            const touch = e.touches[0];
+            const rect = xrayContainer.getBoundingClientRect();
+            const x = touch.clientX - rect.left;
+            const y = touch.clientY - rect.top;
+
+            let magnifierX = x - magnifierSize / 2;
+            let magnifierY = y - magnifierSize / 2;
+
+            magnifierX = Math.max(0, Math.min(magnifierX, rect.width - magnifierSize));
+            magnifierY = Math.max(0, Math.min(magnifierY, rect.height - magnifierSize));
+
+            xrayMagnifier.classList.remove('hidden'); // Mostrar la lupa en touch
+            xrayMagnifier.style.width = `${magnifierSize}px`;
+            xrayMagnifier.style.height = `${magnifierSize}px`;
+            xrayMagnifier.style.transform = `translate(${magnifierX}px, ${magnifierY}px)`;
+
+            xrayInner.style.clipPath = `circle(${magnifierSize / 2}px at ${x}px ${y}px)`;
+        }, { passive: false }); // `passive: false` es importante para `preventDefault`
+
+        xrayContainer.addEventListener('touchend', () => {
+            xrayMagnifier.classList.add('hidden');
+            xrayInner.style.clipPath = `circle(0px at 0 0)`;
         });
     </script>
 </body>
