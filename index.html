@@ -3,16 +3,40 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Ingeniería Estructural | Soluciones Optimizadas</title>
+    <title>Ingeniería Estructural | Soluciones Optimizadas - Inacivil</title>
     
     <!-- Favicon -->
     <link rel="icon" type="image/png" href="favicon.png">
+    <link rel="canonical" href="https://www.inacivil.com/">
 
-    <!-- Meta tags -->
-    <meta name="description" content="Portafolio y servicios de cálculo, análisis y diseño estructural por Inacivil.">
-    <meta property="og:title" content="Ingeniería Estructural | Soluciones Optimizadas">
-    <meta property="og:description" content="Portafolio y servicios de cálculo, análisis y diseño estructural por Inacivil.">
+    <!-- Meta tags y Open Graph -->
+    <meta name="description" content="Servicios profesionales de cálculo, análisis y diseño estructural en Cancún, Riviera Maya y todo México por Inacivil.">
+    <meta property="og:title" content="Ingeniería Estructural | Soluciones Optimizadas - Inacivil">
+    <meta property="og:description" content="Cálculo estructural, modelado 3D, memorias de cálculo y peritajes por Inacivil.">
     <meta property="og:type" content="website">
+    <meta property="og:url" content="https://www.inacivil.com/">
+    <meta property="og:image" content="https://www.inacivil.com/favicon.png">
+
+    <!-- Datos Estructurados para Google (Schema.org) -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "ProfessionalService",
+      "name": "Inacivil - Análisis y Diseño Estructural",
+      "founder": "Luis Alberto Alam Valenzuela",
+      "url": "https://www.inacivil.com",
+      "telephone": "+529981589774",
+      "email": "inacivix@gmail.com",
+      "address": {
+        "@type": "PostalAddress",
+        "addressLocality": "Cancún",
+        "addressRegion": "Quintana Roo",
+        "addressCountry": "MX"
+      },
+      "areaServed": ["Cancún", "Riviera Maya", "Playa del Carmen", "Tulum", "México"],
+      "description": "Cálculo, análisis y diseño estructural de concreto reforzado y acero para Cancún, Quintana Roo y todo México."
+    }
+    </script>
 
     <!-- Tailwind CSS y Fuentes -->
     <script src="https://cdn.tailwindcss.com"></script>
@@ -97,7 +121,7 @@
 </head>
 <body class="bg-slate-50 text-slate-800 font-sans antialiased selection:bg-tech-accent selection:text-white">
 
-    <!-- Barra de navegación -->
+    <!-- Barra de navegación fija -->
     <nav class="fixed w-full z-50 bg-tech-900/95 backdrop-blur-sm border-b border-slate-800 transition-all duration-300">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="flex justify-between items-center h-20">
@@ -129,8 +153,8 @@
             </div>
         </div>
 
-        <!-- Menú desplegable para celular -->
-        <div id="mobile-menu" class="hidden md:hidden border-t border-slate-800 bg-slate-950/95 px-4 pt-4 pb-6 space-y-3">
+        <!-- Menú desplegable para celular con scroll seguro -->
+        <div id="mobile-menu" class="hidden md:hidden border-t border-slate-800 bg-slate-950/95 px-4 pt-4 pb-6 space-y-3 max-h-[calc(100vh-5rem)] overflow-y-auto">
             <p class="text-xs font-bold uppercase tracking-wider text-slate-400 px-1">Acceso Rápido</p>
             
             <a href="#portafolio" class="mobile-link flex items-center justify-between p-3 rounded-xl bg-blue-600/15 border border-blue-500/30 text-white hover:bg-blue-600/25 transition-all">
@@ -186,7 +210,7 @@
                 <a href="#servicios" class="mobile-link flex-1 text-center py-2 rounded-lg bg-slate-800 text-slate-300 hover:text-white text-sm">Servicios</a>
             </div>
             
-            <a href="https://wa.me/529981589774" target="_blank" rel="noopener noreferrer" class="w-full flex items-center justify-center gap-2 p-3 bg-emerald-600 hover:bg-emerald-500 text-white rounded-xl font-bold text-sm">
+            <a href="https://wa.me/529981589774?text=Hola%20Ing.%20Luis,%20me%20gustar%C3%ADa%20cotizar%20un%20proyecto%20de%20c%C3%A1lculo%20estructural." target="_blank" rel="noopener noreferrer" class="w-full flex items-center justify-center gap-2 p-3 bg-emerald-600 hover:bg-emerald-500 text-white rounded-xl font-bold text-sm">
                 <i class="fa-brands fa-whatsapp text-lg"></i> WhatsApp (+52 998 158 9774)
             </a>
         </div>
@@ -217,8 +241,8 @@
         </div>
     </section>
 
-    <!-- Sección Servicios -->
-    <section id="servicios" class="py-24 bg-slate-50">
+    <!-- Sección Servicios con compensación de scroll -->
+    <section id="servicios" class="scroll-mt-24 py-24 bg-slate-50">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="text-center max-w-3xl mx-auto mb-16">
                 <h2 class="text-3xl md:text-4xl font-bold text-tech-900 mb-4">Áreas de Especialidad</h2>
@@ -273,8 +297,22 @@
         </div>
     </section>
 
+    <!-- Franja de Normativas de Diseño Estructural -->
+    <section class="py-10 bg-slate-100 border-b border-slate-200">
+        <div class="max-w-7xl mx-auto px-4 text-center">
+            <p class="text-xs font-bold text-slate-500 uppercase tracking-widest mb-4">Diseño conforme a normativas y códigos vigentes</p>
+            <div class="flex flex-wrap justify-center items-center gap-3 sm:gap-6 text-xs sm:text-sm font-semibold text-slate-700">
+                <span class="bg-white px-3 py-1.5 rounded-lg border border-slate-200 shadow-sm"><i class="fa-solid fa-wind text-tech-accent mr-1.5"></i> CFE Viento (Huracán)</span>
+                <span class="bg-white px-3 py-1.5 rounded-lg border border-slate-200 shadow-sm"><i class="fa-solid fa-wave-square text-tech-accent mr-1.5"></i> CFE Sismo</span>
+                <span class="bg-white px-3 py-1.5 rounded-lg border border-slate-200 shadow-sm"><i class="fa-solid fa-cube text-tech-accent mr-1.5"></i> ACI 318 (Concreto)</span>
+                <span class="bg-white px-3 py-1.5 rounded-lg border border-slate-200 shadow-sm"><i class="fa-solid fa-shapes text-tech-accent mr-1.5"></i> AISC 360 (Acero)</span>
+                <span class="bg-white px-3 py-1.5 rounded-lg border border-slate-200 shadow-sm"><i class="fa-solid fa-book-bookmark text-tech-accent mr-1.5"></i> NTC (CDMX)</span>
+            </div>
+        </div>
+    </section>
+
     <!-- Sección de Inspecciones y Diagnóstico Estructural -->
-    <section id="inspecciones" class="py-24 bg-white">
+    <section id="inspecciones" class="scroll-mt-24 py-24 bg-white">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="text-center max-w-3xl mx-auto mb-16">
                 <h2 class="text-3xl md:text-4xl font-bold text-tech-900 mb-4">Inspecciones y Diagnóstico Estructural</h2>
@@ -285,10 +323,10 @@
 
             <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
                 <div class="relative w-full aspect-video md:aspect-[16/9] bg-slate-100 rounded-3xl overflow-hidden shadow-xl border border-slate-200">
-                    <!-- Contenedor para animación de rayos X -->
-                    <div id="xray-container" class="relative w-full h-full cursor-none">
+                    <!-- Contenedor interactivo de rayos X -->
+                    <div id="xray-container" class="relative w-full h-full cursor-pointer md:cursor-none select-none">
                         <img src="imagenes/columna_1.jpg" alt="Columna de Concreto Exterior" class="absolute inset-0 w-full h-full object-cover">
-                        <img src="imagenes/columna_2.jpg" alt="Columna de Concreto Interior" class="absolute inset-0 w-full h-full object-cover" id="xray-inner">
+                        <img src="imagenes/columna_2.jpg" alt="Columna de Concreto Interior" class="absolute inset-0 w-full h-full object-cover pointer-events-none" id="xray-inner">
                         <div id="xray-magnifier" class="absolute bg-transparent rounded-full border-4 border-blue-500 hidden pointer-events-none z-10"></div>
                     </div>
                 </div>
@@ -324,13 +362,13 @@
                 </div>
             </div>
             <p class="text-center text-sm text-slate-500 mt-12">
-                <i class="fa-solid fa-info-circle mr-1 text-tech-accent"></i> Pasa el cursor sobre la columna para ver su interior y el armado estructural.
+                <i class="fa-solid fa-info-circle mr-1 text-tech-accent"></i> Pasa el cursor o desliza el dedo sobre la columna para visualizar su armado estructural interior.
             </p>
         </div>
     </section>
 
     <!-- SECCIÓN DE COBERTURA / MAPA DE MÉXICO -->
-    <section id="cobertura" class="py-24 bg-slate-50">
+    <section id="cobertura" class="scroll-mt-24 py-24 bg-slate-50">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="text-center max-w-3xl mx-auto mb-16">
                 <h2 class="text-3xl md:text-4xl font-bold text-tech-900 mb-4">Cobertura y Presencia de Proyectos en México</h2>
@@ -343,14 +381,14 @@
     </section>
 
     <!-- Sección Proyectos (#portafolio) -->
-    <section id="portafolio" class="py-24 bg-slate-50">
+    <section id="portafolio" class="scroll-mt-24 py-24 bg-slate-50">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="flex flex-col md:flex-row justify-between items-end mb-12">
                 <div class="max-w-2xl">
                     <h2 class="text-3xl md:text-4xl font-bold text-tech-900 mb-4">Proyectos Destacados</h2>
                     <p class="text-lg text-slate-600">Ejemplos de modelos tridimensionales, diagramas de interacción y detallado de planos estructurales reales.</p>
                 </div>
-                <a href="https://instagram.com/inacivil" target="_blank" class="mt-6 md:mt-0 text-tech-accent hover:text-tech-accentHover font-semibold flex items-center gap-2">
+                <a href="https://instagram.com/inacivil" target="_blank" rel="noopener noreferrer" class="mt-6 md:mt-0 text-tech-accent hover:text-tech-accentHover font-semibold flex items-center gap-2">
                     Ver más en Instagram <i class="fa-brands fa-instagram text-xl"></i>
                 </a>
             </div>
@@ -419,8 +457,8 @@
         </div>
     </section>
 
-    <!-- SECCIÓN DE VISOR 3D INTERACTIVO -->
-    <section id="visor-3d" class="py-24 bg-tech-900 text-white">
+    <!-- SECCIÓN DE VISOR 3D INTERACTIVO (loading="lazy" para mejor rendimiento) -->
+    <section id="visor-3d" class="scroll-mt-24 py-24 bg-tech-900 text-white">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="text-center max-w-3xl mx-auto mb-16">
                 <h2 class="text-3xl md:text-4xl font-bold mb-4">Visualización 3D Interactiva de Proyectos</h2>
@@ -436,7 +474,7 @@
                     auto-rotate 
                     shadow-intensity="1"
                     environment-image="neutral"
-                    loading="eager"
+                    loading="lazy"
                     exposure="1"
                     shadow-softness="0.5"
                 ></model-viewer>
@@ -448,7 +486,7 @@
     </section>
 
     <!-- Sección Contacto (#contacto) con Formulario -->
-    <section id="contacto" class="py-24 bg-tech-900 text-white relative overflow-hidden">
+    <section id="contacto" class="scroll-mt-24 py-24 bg-tech-900 text-white relative overflow-hidden">
         <div class="relative max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="text-center max-w-2xl mx-auto mb-12">
                 <h2 class="text-3xl md:text-5xl font-bold mb-4">¿Listo para calcular tu próximo proyecto?</h2>
@@ -457,7 +495,7 @@
                 </p>
             </div>
 
-            <!-- Formulario de Contacto -->
+            <!-- Formulario de Contacto conectado a Web3Forms -->
             <div class="bg-slate-800/80 border border-slate-700/80 rounded-2xl p-6 sm:p-10 shadow-2xl backdrop-blur-sm mb-12">
                 <div class="mb-6 border-b border-slate-700/60 pb-4">
                     <h3 class="text-2xl font-bold text-white flex items-center gap-2">
@@ -467,7 +505,12 @@
                 </div>
 
                 <form id="contact-form" class="space-y-6">
+                    <input type="hidden" name="access_key" value="a0259b20-b0ff-4f62-83c9-e44c2404196f">
+                    <input type="hidden" name="subject" value="Nueva Cotización de Proyecto - Inacivil">
+                    <input type="checkbox" name="botcheck" class="hidden" style="display: none;">
+
                     <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                        <!-- Campo: Nombre -->
                         <div>
                             <label for="form-name" class="block text-sm font-semibold text-slate-200 mb-2">
                                 Nombre completo <span class="text-blue-400">*</span>
@@ -479,14 +522,15 @@
                                 <input 
                                     type="text" 
                                     id="form-name" 
-                                    name="nombre" 
+                                    name="name" 
                                     required 
                                     placeholder="Ing. Carlos Mendoza" 
-                                    class="w-full pl-10 pr-4 py-3 bg-slate-900/90 border border-slate-700 rounded-xl text-white placeholder-slate-500 focus:outline-none focus:ring-2 focus:ring-tech-accent focus:border-transparent transition-all"
+                                    class="w-full pl-10 pr-4 py-3 bg-slate-900/90 border border-slate-700 rounded-xl text-white placeholder-slate-500 focus:outline-none focus:ring-2 focus:ring-tech-accent transition-all"
                                 >
                             </div>
                         </div>
 
+                        <!-- Campo: Correo -->
                         <div>
                             <label for="form-email" class="block text-sm font-semibold text-slate-200 mb-2">
                                 Correo electrónico de contacto <span class="text-blue-400">*</span>
@@ -498,15 +542,16 @@
                                 <input 
                                     type="email" 
                                     id="form-email" 
-                                    name="correo" 
+                                    name="email" 
                                     required 
                                     placeholder="carlos@ejemplo.com" 
-                                    class="w-full pl-10 pr-4 py-3 bg-slate-900/90 border border-slate-700 rounded-xl text-white placeholder-slate-500 focus:outline-none focus:ring-2 focus:ring-tech-accent focus:border-transparent transition-all"
+                                    class="w-full pl-10 pr-4 py-3 bg-slate-900/90 border border-slate-700 rounded-xl text-white placeholder-slate-500 focus:outline-none focus:ring-2 focus:ring-tech-accent transition-all"
                                 >
                             </div>
                         </div>
                     </div>
 
+                    <!-- Campo: Proyecto -->
                     <div>
                         <label for="form-project" class="block text-sm font-semibold text-slate-200 mb-2">
                             Detalles del proyecto <span class="text-blue-400">*</span>
@@ -517,19 +562,21 @@
                             </span>
                             <textarea 
                                 id="form-project" 
-                                name="proyecto" 
+                                name="message" 
                                 rows="4" 
                                 required 
                                 placeholder="Describe brevemente el tipo de obra (ej. Casa habitación 3 niveles, nave industrial, revisión estructural, ubicación aproximada...)" 
-                                class="w-full pl-10 pr-4 py-3 bg-slate-900/90 border border-slate-700 rounded-xl text-white placeholder-slate-500 focus:outline-none focus:ring-2 focus:ring-tech-accent focus:border-transparent transition-all resize-none"
+                                class="w-full pl-10 pr-4 py-3 bg-slate-900/90 border border-slate-700 rounded-xl text-white placeholder-slate-500 focus:outline-none focus:ring-2 focus:ring-tech-accent transition-all resize-none"
                             ></textarea>
                         </div>
                     </div>
 
-                    <div class="flex flex-col sm:flex-row justify-end items-center gap-4 pt-2">
-                        <span id="form-status" class="text-sm font-medium hidden"></span>
+                    <!-- Botón de Envío y Mensaje de Estado -->
+                    <div class="flex flex-col sm:flex-row justify-between items-center gap-4 pt-2">
+                        <span id="form-status" class="text-sm font-medium"></span>
                         <button 
                             type="submit" 
+                            id="submit-btn"
                             class="w-full sm:w-auto px-8 py-3.5 bg-tech-accent hover:bg-tech-accentHover text-white font-bold rounded-xl transition-all shadow-lg shadow-blue-900/50 flex items-center justify-center gap-2 group"
                         >
                             <span>Enviar Solicitud</span>
@@ -546,7 +593,7 @@
                         <i class="fa-brands fa-whatsapp text-2xl text-green-400"></i>
                     </div>
                     <h4 class="text-sm text-slate-400 uppercase tracking-wider mb-1">WhatsApp / Teléfono</h4>
-                    <a href="https://wa.me/529981589774" target="_blank" class="font-semibold text-lg hover:text-green-400 transition-colors">+52 (998) 158 9774</a>
+                    <a href="https://wa.me/529981589774" target="_blank" rel="noopener noreferrer" class="font-semibold text-lg hover:text-green-400 transition-colors">+52 (998) 158 9774</a>
                 </div>
 
                 <div class="bg-slate-800/50 border border-slate-700 rounded-xl p-6 flex flex-col items-center text-center">
@@ -570,7 +617,7 @@
                 <a href="mailto:inacivix@gmail.com" class="inline-flex items-center justify-center gap-2 px-8 py-4 bg-tech-accent hover:bg-tech-accentHover text-white rounded-lg font-bold transition-all shadow-lg shadow-blue-900/50 text-base">
                     <i class="fa-regular fa-paper-plane"></i> Enviar Correo a inacivix@gmail.com
                 </a>
-                <a href="https://wa.me/529981589774" target="_blank" class="inline-flex items-center justify-center gap-2 px-8 py-4 bg-emerald-600 hover:bg-emerald-500 text-white rounded-lg font-bold transition-all shadow-lg text-base">
+                <a href="https://wa.me/529981589774?text=Hola%20Ing.%20Luis,%20me%20gustar%C3%ADa%20cotizar%20un%20proyecto%20de%20c%C3%A1lculo%20estructural." target="_blank" rel="noopener noreferrer" class="inline-flex items-center justify-center gap-2 px-8 py-4 bg-emerald-600 hover:bg-emerald-500 text-white rounded-lg font-bold transition-all shadow-lg text-base">
                     <i class="fa-brands fa-whatsapp"></i> Chatear por WhatsApp
                 </a>
             </div>
@@ -582,7 +629,6 @@
         <div class="max-w-7xl mx-auto px-4 flex flex-col md:flex-row justify-between items-center gap-6">
             <p>&copy; 2026 Inacivil. Todos los derechos reservados.</p>
             
-            <!-- Hipervínculos hacia la subpágina privacidad.html -->
             <div class="flex items-center space-x-6 text-xs sm:text-sm">
                 <a href="privacidad.html#aviso-privacidad" class="hover:text-tech-accent transition-colors underline-offset-4 hover:underline">
                     Aviso de Privacidad
@@ -593,13 +639,24 @@
                 </a>
             </div>
 
-            <!-- Redes sociales -->
             <div class="flex space-x-4">
                 <a href="https://www.linkedin.com/in/inacivil-work-688a6b404" target="_blank" rel="noopener noreferrer" class="hover:text-white transition-colors" aria-label="LinkedIn"><i class="fa-brands fa-linkedin text-xl"></i></a>
                 <a href="https://instagram.com/inacivil" target="_blank" rel="noopener noreferrer" class="hover:text-white transition-colors" aria-label="Instagram"><i class="fa-brands fa-instagram text-xl"></i></a>
             </div>
         </div>
     </footer>
+
+    <!-- Botón flotante permanente de WhatsApp -->
+    <a href="https://wa.me/529981589774?text=Hola%20Ing.%20Luis,%20me%20gustar%C3%ADa%20cotizar%20un%20proyecto%20de%20c%C3%A1lculo%20estructural." 
+       target="_blank" 
+       rel="noopener noreferrer" 
+       class="fixed bottom-6 right-6 z-50 bg-emerald-600 hover:bg-emerald-500 text-white w-14 h-14 rounded-full flex items-center justify-center shadow-2xl hover:scale-110 transition-all duration-300 group"
+       aria-label="Contactar por WhatsApp">
+        <i class="fa-brands fa-whatsapp text-3xl"></i>
+        <span class="absolute right-16 bg-slate-900 text-white text-xs px-3 py-1.5 rounded-lg whitespace-nowrap opacity-0 group-hover:opacity-100 transition-opacity duration-300 shadow-md border border-slate-700 pointer-events-none">
+            ¿Cotizar por WhatsApp?
+        </span>
+    </a>
 
     <!-- Scripts JavaScript -->
     <script>
@@ -630,34 +687,74 @@
             });
         });
 
-        // Formulario de Contacto
+        // Formulario de Contacto conectado a Web3Forms
         const contactForm = document.getElementById('contact-form');
         const formStatus = document.getElementById('form-status');
+        const submitBtn = document.getElementById('submit-btn');
 
         if (contactForm) {
-            contactForm.addEventListener('submit', (e) => {
+            contactForm.addEventListener('submit', async (e) => {
                 e.preventDefault();
-                const name = document.getElementById('form-name').value;
-                const email = document.getElementById('form-email').value;
-                const project = document.getElementById('form-project').value;
 
-                const subject = encodeURIComponent(`Consulta de Proyecto: ${name}`);
-                const body = encodeURIComponent(`Hola Inacivil,\n\nMi nombre es: ${name}\nCorreo de contacto: ${email}\n\nDetalles del Proyecto:\n${project}`);
-                
-                formStatus.className = "text-sm text-green-400 font-medium block";
-                formStatus.textContent = "Preparando mensaje...";
-                
-                window.location.href = `mailto:inacivix@gmail.com?subject=${subject}&body=${body}`;
+                submitBtn.disabled = true;
+                submitBtn.innerHTML = '<span>Enviando...</span> <i class="fa-solid fa-spinner fa-spin"></i>';
+                formStatus.className = "text-sm text-blue-400 font-medium";
+                formStatus.textContent = "Transmitiendo datos...";
+
+                const formData = new FormData(contactForm);
+
+                try {
+                    const response = await fetch('https://api.web3forms.com/submit', {
+                        method: 'POST',
+                        body: formData
+                    });
+
+                    const data = await response.json();
+
+                    if (data.success) {
+                        formStatus.className = "text-sm text-green-400 font-bold";
+                        formStatus.textContent = "✓ ¡Solicitud enviada con éxito! Te contactaremos a la brevedad.";
+                        contactForm.reset();
+                    } else {
+                        formStatus.className = "text-sm text-red-400 font-medium";
+                        formStatus.textContent = "Error: " + (data.message || "No se pudo enviar.");
+                    }
+                } catch (error) {
+                    formStatus.className = "text-sm text-red-400 font-medium";
+                    formStatus.textContent = "Error de conexión. Puedes escribirnos directamente por WhatsApp.";
+                } finally {
+                    submitBtn.disabled = false;
+                    submitBtn.innerHTML = '<span>Enviar Solicitud</span> <i class="fa-solid fa-paper-plane text-sm"></i>';
+                }
             });
         }
 
-        // Animación de Rayos X
+        // Animación de Rayos X (Soporte seguro táctil y de cursor)
         const xrayContainer = document.getElementById('xray-container');
         const xrayInner = document.getElementById('xray-inner');
         const xrayMagnifier = document.getElementById('xray-magnifier');
         const magnifierSize = 150;
 
         xrayInner.style.clipPath = `circle(0px at 0 0)`;
+
+        const updateMagnifierPosition = (clientX, clientY) => {
+            const rect = xrayContainer.getBoundingClientRect();
+            const x = clientX - rect.left;
+            const y = clientY - rect.top;
+
+            let magnifierX = x - magnifierSize / 2;
+            let magnifierY = y - magnifierSize / 2;
+
+            magnifierX = Math.max(0, Math.min(magnifierX, rect.width - magnifierSize));
+            magnifierY = Math.max(0, Math.min(magnifierY, rect.height - magnifierSize));
+
+            xrayMagnifier.classList.remove('hidden');
+            xrayMagnifier.style.width = `${magnifierSize}px`;
+            xrayMagnifier.style.height = `${magnifierSize}px`;
+            xrayMagnifier.style.transform = `translate(${magnifierX}px, ${magnifierY}px)`;
+
+            xrayInner.style.clipPath = `circle(${magnifierSize / 2}px at ${x}px ${y}px)`;
+        };
 
         xrayContainer.addEventListener('mouseenter', () => {
             xrayMagnifier.classList.remove('hidden');
@@ -669,43 +766,19 @@
         });
 
         xrayContainer.addEventListener('mousemove', (e) => {
-            const rect = xrayContainer.getBoundingClientRect();
-            const x = e.clientX - rect.left;
-            const y = e.clientY - rect.top;
-
-            let magnifierX = x - magnifierSize / 2;
-            let magnifierY = y - magnifierSize / 2;
-
-            magnifierX = Math.max(0, Math.min(magnifierX, rect.width - magnifierSize));
-            magnifierY = Math.max(0, Math.min(magnifierY, rect.height - magnifierSize));
-
-            xrayMagnifier.style.width = `${magnifierSize}px`;
-            xrayMagnifier.style.height = `${magnifierSize}px`;
-            xrayMagnifier.style.transform = `translate(${magnifierX}px, ${magnifierY}px)`;
-
-            xrayInner.style.clipPath = `circle(${magnifierSize / 2}px at ${x}px ${y}px)`;
+            updateMagnifierPosition(e.clientX, e.clientY);
         });
 
-        xrayContainer.addEventListener('touchmove', (e) => {
-            e.preventDefault();
+        // Eventos táctiles optimizados para celulares
+        xrayContainer.addEventListener('touchstart', (e) => {
             const touch = e.touches[0];
-            const rect = xrayContainer.getBoundingClientRect();
-            const x = touch.clientX - rect.left;
-            const y = touch.clientY - rect.top;
+            updateMagnifierPosition(touch.clientX, touch.clientY);
+        }, { passive: true });
 
-            let magnifierX = x - magnifierSize / 2;
-            let magnifierY = y - magnifierSize / 2;
-
-            magnifierX = Math.max(0, Math.min(magnifierX, rect.width - magnifierSize));
-            magnifierY = Math.max(0, Math.min(magnifierY, rect.height - magnifierSize));
-
-            xrayMagnifier.classList.remove('hidden');
-            xrayMagnifier.style.width = `${magnifierSize}px`;
-            xrayMagnifier.style.height = `${magnifierSize}px`;
-            xrayMagnifier.style.transform = `translate(${magnifierX}px, ${magnifierY}px)`;
-
-            xrayInner.style.clipPath = `circle(${magnifierSize / 2}px at ${x}px ${y}px)`;
-        }, { passive: false });
+        xrayContainer.addEventListener('touchmove', (e) => {
+            const touch = e.touches[0];
+            updateMagnifierPosition(touch.clientX, touch.clientY);
+        }, { passive: true });
 
         xrayContainer.addEventListener('touchend', () => {
             xrayMagnifier.classList.add('hidden');
